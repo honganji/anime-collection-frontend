@@ -1,7 +1,7 @@
 #top-nav {
   padding: 0px 96px 8px 96px;
   border: black;
-  height: 120px;
+  height: 12vh;
   display: flex;
   justify-content: space-between;
   text-align: center;
@@ -12,6 +12,15 @@
   display: flex;
   align-items: flex-end;
 }
+
+#top-nav .container:hover {
+  cursor: pointer;
+}
+
+#top-nav .container:active {
+  cursor: pointer;
+}
+
 
 #top-nav .menu {
   align-self: flex-end;

@@ -1,0 +1,7 @@
+#login {
+  height: 87vh;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

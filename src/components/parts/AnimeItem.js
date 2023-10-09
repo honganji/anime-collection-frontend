@@ -1,17 +1,18 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import "./AnimeItem.css";
 
-export default function AnimeItem() {
+export default function AnimeItem(props) {
+  const data = props.data;
+  const navigator = useNavigate();
   return (
     <div id='home-anime-item'>
-      <img className='img' src='https://s.animeanime.jp/imgs/p/X2bKTbbkhKNuuQZDts1HWTagH66grq_oqaqr/491839.jpg' alt='trailer' />
+      <img className='img' src={data["image_url"]} alt='trailer' onClick={() => navigator("/detail")} />
       <div className='info-container'>
-        <div className='anime-title'>Jujutsu Kaisen</div>
-        <div className='item'><div className='subtitle'>Author:</div>&nbsp;&nbsp;Gege Akutami</div>
-        <div className='item'><div className='subtitle'>Episodes:</div>&nbsp;&nbsp;24, Serises: 2</div>
-        <div className='item'><div className='subtitle'>Desription:</div>&nbsp;&nbsp;The story follows high school student Yuji Itadori as he joins a secret organization
-          of Jujutsu Sorcerers in order to kill a powerful Curse named Ryomen Sukuna, of whom
-          Yuji becomes the host.</div>
+        <div className='anime-title' onClick={() => navigator("/detail")}>{data["name"]}</div>
+        <div className='item'><div className='subtitle'>Author:</div>&nbsp;&nbsp;{data["author"]}</div>
+        <div className='item'><div className='subtitle'>Episodes:</div>&nbsp;&nbsp;{data["episodes"]}, Serises: {data["serises"]}</div>
+        <div className='item'><div className='subtitle'>Desription:</div>&nbsp;&nbsp;{data["description"]}</div>
       </div>
     </div>
   );

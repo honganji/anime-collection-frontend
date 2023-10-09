@@ -1,20 +1,28 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import "./Navbar.css";
 import Logo from '../components/parts/Logo';
 
 export default function Navbar() {
+  const navigator = useNavigate();
+  const url = useLocation();
+  const pattern = /signup|login/g;
+  const result = pattern.test(url.pathname);
   return (
     <div id='top-nav'>
-      <div className='container'>
+      <div className='container' onClick={() => navigator('/')}>
         <Logo />
       </div>
       <div className='menu'>
-        <div className='upper-menu'>
-          <div className='greet'>Welcome Guest</div>
-          <div className='btn colored-btn'>Signup</div>
-          <div className='btn colored-btn'>Log in</div>
-        </div>
+        {
+          result
+            ? <></>
+            : <div className='upper-menu'>
+              <div className='greet'>Welcome Guest</div>
+              <button className='btn colored-btn' onClick={() => navigator('/signup')}>Signup</button>
+              <button className='btn colored-btn' onClick={() => navigator('/login')}>Log in</button>
+            </div>
+        }
         <div className='lower-menu'>
           <div>Genre</div>
           <div>Timeline</div>

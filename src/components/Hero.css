@@ -46,4 +46,13 @@
   margin-right: auto;
   display: flex;
   justify-content: center;
+  font-size: 18px;
+}
+
+#home-hero .detail_button:hover {
+  font-size: 20px;
+}
+
+#home-hero .detail_button:active {
+  font-size: 20px;
 }

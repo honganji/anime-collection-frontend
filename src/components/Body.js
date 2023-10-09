@@ -3,14 +3,11 @@ import "./Body.css";
 import AnimeItem from './parts/AnimeItem';
 import TabBlock from './parts/TabBlock';
 
-export default function Body() {
+export default function Body(props) {
 
-  const animeTitleList = ["Jujutsu Kaisen", "Kingdom", "Demon Slayer", "Nisekoi", "Jujutsu Kaisen", "Kingdom", "Demon Slayer", "Nisekoi", "Demon Slayer", "Nisekoi"];
+  const dataList = props.animeList;
   function getTabs() {
-    const numOfTabs = Math.floor(animeTitleList.length / 10);
-    if (numOfTabs === 0) {
-      return <>nothing</>;
-    }
+    const numOfTabs = Math.floor(dataList.length / 10);
     return <TabBlock numOfTabs={numOfTabs} />;
   }
 
@@ -18,7 +15,7 @@ export default function Body() {
     <div id='home-body'>
       <div className='title'>Anime List</div>
       {
-        animeTitleList.map((animeTitle) => <AnimeItem />)
+        dataList.map((data) => <AnimeItem data={data} />)
       }
       {
         getTabs()

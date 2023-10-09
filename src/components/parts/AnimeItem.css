@@ -10,6 +10,15 @@
 
 #home-anime-item .img {
   width: 150px;
+  height: 210px;
+}
+
+#home-anime-item .img:hover {
+  cursor: pointer;
+}
+
+#home-anime-item .img:active {
+  cursor: pointer;
 }
 
 #home-anime-item .info-container {
@@ -26,6 +35,14 @@
   float: left;
   text-decoration: underline;
 }
+
+#home-anime-item .anime-title:hover {
+  cursor: pointer;
+}
+
+#home-anime-item .anime-title:active {
+  cursor: pointer;
+} 
 
 #home-anime-item .info-container > * {
   padding: 3px;
