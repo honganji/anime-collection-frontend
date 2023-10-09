@@ -2,10 +2,10 @@
   padding: 0px 96px 8px 96px;
   border: black;
   height: 120px;
-  background-color: aqua;
   display: flex;
   justify-content: space-between;
   text-align: center;
+  border-bottom: 1px solid #170D02;
 }
 
 .term-font {
