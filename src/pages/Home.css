@@ -1,0 +1,69 @@
+.container {
+  background-color: rgba(23, 13, 2, .75);
+  height: 70vh;
+  color: black;
+  display: flex;
+  padding: 0px 96px;
+  /* justify-content: center;
+  align-items: top; */
+}
+
+.video {
+  width: 908px;
+  height: 560px;
+  border: none;
+}
+
+.btn-container {
+  display: flex;
+}
+
+.monotone_btn {
+  line-height: 56px;
+  background-color: #170D02;
+  width: 160px;
+  margin: 3px;
+  color: white;
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 2px rgba(23,13,2,0.25);
+  border-radius: 100px;
+  font-size: 20px;
+  font-family: 'PT Serif', sans-serif;
+  border: none;
+}
+
+.monotone_btn:disabled {
+  background-color: rgba(23, 13, 2, .50);
+  pointer-events: none;
+}
+
+.monotone_btn:hover {
+  font-size: 24px;
+}
+
+.info-container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: 32px; 
+  /* display: flex; */
+  /* justify-content: center; */
+}
+
+.detail_button {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  display: flex;
+  justify-content: center;
+}
+
+.anime_img {
+  width: 304px;
+}
+
+.arrow-icon {
+  width: 25px;
+  height: 25px;
+  align-self: center;
+}
