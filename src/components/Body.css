@@ -1,0 +1,15 @@
+#home-body-container {
+  margin-top: 96px;
+  margin-left: 96px;
+  margin-right: 96px;
+  display: flex;
+  flex-direction: column;
+}
+
+#home-body-title {
+  margin-right: auto;
+  margin-left: 32px;
+  font-size: 36px;
+  font-family: 'PT Serif', sans-serif;
+  font-weight: bolder;
+}

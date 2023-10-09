@@ -1,0 +1,45 @@
+#anime-item-container {
+  margin: 16px 32px;
+  padding: 0px 20px;
+  background-color: #E7E4E4;
+  height: 25vh;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+#home_body_anime_img {
+  width: 150px;
+}
+
+#anime-item-info-container {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  text-align: left;
+}
+
+#anime-item-info-title {
+  font-size: 28px;
+  text-decoration: underline;
+}
+
+#anime-item-info-container > * {
+  padding: 3px;
+  font-family: 'Frank Ruhl Libre';
+}
+
+.anime-item-info-item {
+  padding-left: 5px;
+  float: left;
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
+}
+
+.anime-item-info-strong {
+  text-decoration: underline;
+  font-weight: bolder;
+}
