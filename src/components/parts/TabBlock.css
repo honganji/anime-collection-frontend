@@ -1,0 +1,17 @@
+#tab-block {
+  background-color: #E7E4E4;
+  width: 15px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px black solid;
+}
+
+#tab-block:hover {
+  cursor: pointer;
+}
+
+#tab-block:active {
+  cursor: pointer;
+}
