@@ -1,55 +1,49 @@
-.container {
+#home-hero {
   background-color: rgba(23, 13, 2, .75);
   height: 70vh;
   color: black;
   display: flex;
-  padding: 0px 96px;
+  /* justify-content: flex-end; */
+  align-items: flex-end;
+  padding: 0px 96px 32px;
 }
 
-.video {
+#home-hero .video-iframe {
   width: 908px;
   height: 560px;
   border: none;
 }
 
-.btn-container {
+#home-hero .btn-container {
   display: flex;
 }
 
-.monotone_btn {
+#home-hero .monotone_btn {
   background-color: #170D02;
 }
 
-.monotone_btn:disabled {
+#home-hero  .monotone_btn:disabled {
   background-color: rgba(23, 13, 2, .50);
   pointer-events: none;
 }
 
-.monotone_btn:hover {
+#home-hero .monotone_btn:hover {
   font-size: 24px;
 }
 
-.info-container {
+#home-hero .info-container {
   margin-left: auto;
   margin-right: auto;
   margin-top: auto;
-  margin-bottom: 32px;
 }
 
-.detail_button {
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  display: flex;
-  justify-content: center;
-}
-
-.anime_img {
+#home-hero .anime_img {
   width: 304px;
 }
 
-.arrow-icon {
-  width: 25px;
-  height: 25px;
-  align-self: center;
+#home-hero .detail_button {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
 }

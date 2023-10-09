@@ -23,5 +23,5 @@
 
 .btn:active {
   opacity: 0.50;
-  cursor:crosshair;
+  cursor:pointer;
 }

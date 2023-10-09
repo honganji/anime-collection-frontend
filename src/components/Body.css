@@ -1,4 +1,4 @@
-#home-body-container {
+#home-body {
   margin-top: 96px;
   margin-left: 96px;
   margin-right: 96px;
@@ -6,7 +6,7 @@
   flex-direction: column;
 }
 
-#home-body-title {
+#home-body .title {
   margin-right: auto;
   margin-left: 32px;
   font-size: 36px;

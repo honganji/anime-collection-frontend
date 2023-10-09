@@ -2,11 +2,11 @@
   display: flex;
 }
 
-#item {
+#logo-title #item {
   margin: 5px;
 }
 
-#title {
+#logo-title #title {
   margin-left: 8px;
   font-size: 50px; 
   font-family: 'PT Serif', sans-serif;

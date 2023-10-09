@@ -1,4 +1,4 @@
-.nav {
+#top-nav {
   padding: 0px 96px 8px 96px;
   border: black;
   height: 120px;
@@ -8,27 +8,32 @@
   border-bottom: 1px solid #170D02;
 }
 
-.term {
-  font-family: 'PT Serif', sans-serif;
-  font-weight: bolder;
-  font-size: 30px;
+#top-nav .container {
+  display: flex;
+  align-items: flex-end;
 }
 
-.menu {
+#top-nav .menu {
   align-self: flex-end;
 }
 
-.upper-menu {
+#top-nav .upper-menu {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.colored-btn {
+#top-nav .greet {
+  font-family: 'PT Serif', sans-serif;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+#top-nav .colored-btn {
   background-image: linear-gradient(to right, #DC8C37 0%, #E8582E 100%);
 }
 
-.lower-menu {
+#top-nav .lower-menu {
   display: flex;
   font-size: 32px;
   font-family: 'PT Serif', sans-serif;
@@ -37,10 +42,6 @@
   float: right;
 }
 
-.lower-menu > * {
-  padding: 0px 3px;
-}
-#top-logo-container {
-  display: flex;
-  align-items: flex-end;
+#top-nav .lower-menu > * {
+  padding: 0px 7px;
 }
