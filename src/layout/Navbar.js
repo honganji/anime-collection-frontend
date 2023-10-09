@@ -1,15 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import "./Navbar.css";
-import icon from '../assets/package.png';
+import Logo from '../components/parts/Logo';
 
 export default function Navbar() {
   return (
     <div>
       <div className='nav'>
-        <div className='logo-title'>
-          <img alt='icon' src={icon} style={{ width: "64px" }} className='icon' />
-          <div className='title'>Anime Collection</div>
+        <div id='top-logo-container'>
+          <Logo />
         </div>
         <div className='menu'>
           <div className='upper-menu'>

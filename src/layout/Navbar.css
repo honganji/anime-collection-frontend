@@ -14,11 +14,6 @@
   font-size: 30px;
 }
 
-.logo-title {
-  display: flex;
-  align-self: flex-end;
-}
-
 .menu {
   align-self: flex-end;
 }
@@ -42,14 +37,10 @@
   float: right;
 }
 
-.item {
-  margin: 5px;
+.lower-menu > * {
+  padding: 0px 3px;
 }
-
-.title {
-  margin-left: 8px;
-  font-size: 50px; 
-  font-family: 'PT Serif', sans-serif;
-  font-style: italic;
-  text-shadow: 0px 4px 2px rgba(23,13,2,0.50);
+#top-logo-container {
+  display: flex;
+  align-items: flex-end;
 }
