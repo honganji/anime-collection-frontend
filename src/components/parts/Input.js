@@ -6,7 +6,7 @@ export default function Input(props) {
   return (
     <div id='input'>
       <div className='item'>{title}</div>
-      <input className='input-box' type='text' placeholder={`Enter your ${props.propertyName}`} name={props.propertyName} value={props.value} onChange={(e) => props.onInputChange(e)}></input>
+      <input className='box' type='text' placeholder={`Enter your ${props.propertyName}`} name={props.propertyName} value={props.value} onChange={(e) => props.onInputChange(e)}></input>
     </div>
   );
 }
