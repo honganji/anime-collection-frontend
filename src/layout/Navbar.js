@@ -13,9 +13,9 @@ export default function Navbar() {
         </div>
         <div className='menu'>
           <div className='upper-menu'>
-            <div className='term-font welcome'>Welcome Guest</div>
-            <div className='btn'>Signup</div>
-            <div className='btn'>Log in</div>
+            <div className='term'>Welcome Guest</div>
+            <div className='btn colored-btn'>Signup</div>
+            <div className='btn colored-btn'>Log in</div>
           </div>
           <div className='lower-menu'>
             <div className='item'>Genre</div>
