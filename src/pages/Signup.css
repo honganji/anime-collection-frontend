@@ -1,7 +1,23 @@
 #signup {
   height: 87vh;
-  background-color: gray;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#signup .colored-btn {
+  margin-top: 20px;
+  height: 60px;
+  width: 150px;
+  background-image: linear-gradient(to right, #DC8C37 0%, #E8582E 100%);
+  font-size: 28px;
+}
+
+#signup .colored-btn:hover {
+  font-size: 30px;
+}
+
+#signup .colored-btn:active {
+  font-size: 30px;
 }
