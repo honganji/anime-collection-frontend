@@ -1,28 +1,33 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import "./Navbar.css";
-import icon from '../assets/package.png';
+import Logo from '../components/parts/Logo';
 
 export default function Navbar() {
+  const navigator = useNavigate();
+  const url = useLocation();
+  const pattern = /signup|login/g;
+  const result = pattern.test(url.pathname);
   return (
-    <div>
-      <div className='nav'>
-        <div className='logo-title'>
-          <img alt='icon' src={icon} style={{ width: "64px" }} className='icon' />
-          <div className='title'>Anime Collection</div>
-        </div>
-        <div className='menu'>
-          <div className='upper-menu'>
-            <div className='term-font welcome'>Welcome Guest</div>
-            <div className='btn'>Signup</div>
-            <div className='btn'>Log in</div>
-          </div>
-          <div className='lower-menu'>
-            <div className='item'>Genre</div>
-            <div className='item'>Timeline</div>
-          </div>
+    <div id='top-nav'>
+      <div className='container' onClick={() => navigator('/')}>
+        <Logo />
+      </div>
+      <div className='menu'>
+        {
+          result
+            ? <></>
+            : <div className='upper-menu'>
+              <div className='greet'>Welcome Guest</div>
+              <button className='btn colored-btn' onClick={() => navigator('/signup')}>Signup</button>
+              <button className='btn colored-btn' onClick={() => navigator('/login')}>Log in</button>
+            </div>
+        }
+        <div className='lower-menu'>
+          <div>Genre</div>
+          <div>Timeline</div>
         </div>
       </div>
-    </div >
+    </div>
   );
 }
