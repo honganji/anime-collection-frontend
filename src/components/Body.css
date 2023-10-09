@@ -1,9 +1,9 @@
 #home-body {
-  margin-top: 96px;
-  margin-left: 96px;
-  margin-right: 96px;
+  margin: 96px 96px 32px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #home-body .title {
