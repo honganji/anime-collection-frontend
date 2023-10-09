@@ -26,7 +26,7 @@ export default function Lonin() {
     });
   };
   return (
-    <div id='signup'>
+    <div id='login'>
       <form onSubmit={(e) => onSubmit(e)}>
         <Input propertyName="name" value={name} onInputChange={onInputChange} />
         {/* <Input propertyName="email" value={email} onInputChange={onInputChange} /> */}
