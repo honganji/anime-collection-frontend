@@ -13,3 +13,12 @@
   font-family: 'PT Serif', sans-serif;
   font-weight: bolder;
 }
+
+#home-body .tab-container {
+  display: flex;
+  flex-direction: row;
+}
+
+#home-body .tab-container > * {
+  margin: 0px 2px;
+}
