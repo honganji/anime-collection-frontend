@@ -7,9 +7,14 @@ import termList from '../data/term';
 export default function Navbar() {
   const navigator = useNavigate();
   const url = useLocation();
+
+  // check current login state
+  // For Dev
   const state = url.state ?? { name: "Guest" };
   const pattern = /signup|login/g;
   const result = pattern.test(url.pathname);
+
+  // control details elements open state
   var details = [...document.querySelectorAll('details')];
   document.addEventListener('click', function (e) {
     if (!details.some(f => f.contains(e.target))) {
@@ -18,6 +23,8 @@ export default function Navbar() {
       details.forEach(f => !f.contains(e.target) ? f.removeAttribute('open') : '');
     }
   });
+
+  // generate summery items function
   function generateSummery(term) {
     let uiList = [];
     const termObject = termList.filter((object) => {
@@ -51,7 +58,6 @@ export default function Navbar() {
                   </div>
                   : <button className='btn colored-btn' onClick={() => navigator('/')}>Log Out</button>
               }
-
             </div>
         }
         <div className='lower-menu'>

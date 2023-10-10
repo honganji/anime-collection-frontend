@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation, useParams, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import animeList from '../data/anime';
 import TabBlock from '../components/parts/TabBlock';
 import AnimeItem from '../components/parts/AnimeItem';
@@ -10,6 +10,8 @@ export default function Class() {
   const term = (params.get("term")).charAt(0).toUpperCase() + (params.get("term")).slice(1);
   let item = "";
   let classifiedAnimeList = [];
+
+  // define item and classified anime list following the term
   if (term === "Genre") {
     item = (params.get("item")).charAt(0).toUpperCase() + (params.get("item")).slice(1);
     classifiedAnimeList = animeList.filter((anime) => {
@@ -25,11 +27,13 @@ export default function Class() {
       }
     }).map((filteredAnime) => filteredAnime);
   }
-  console.log(classifiedAnimeList);
+
+  // get tabs
   function getTabs() {
     const numOfTabs = Math.floor(classifiedAnimeList.length / 10);
     return <TabBlock numOfTabs={numOfTabs} />;
   }
+
   return (
     <div id='class'>
       <div className='title'>{term}: {item}</div>
