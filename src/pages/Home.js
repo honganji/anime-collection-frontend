@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Home.css";
-import Hero from '../components/Hero';
+import Hero from '../components/HomeHero';
 import Body from '../components/Body';
 import animeList from "../data/anime";
 

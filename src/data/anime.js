@@ -9,7 +9,14 @@ const animeList = [
     serises: 2,
     description: "The story follows high school student Yuji Itadori as he joins a secret organization of Jujutsu Sorcerers in order to kill a powerful Curse named Ryomen Sukuna, of whom Yuji becomes the host.",
     genre: ["action"],
-    started_date: 2020
+    started_date: 2020,
+    images: [
+      "https://static.bandainamcoent.eu/high/jujutsu-kaisen/jujutsu-kaisen-cursed-clash/00-page-setup/JJK-header-mobile2.jpg",
+      "https://cdn.vox-cdn.com/thumbor/OaLG8uG4V8Kgb4mKomOktrUgDD0=/0x50:1600x850/fit-in/1200x600/cdn.vox-cdn.com/uploads/chorus_asset/file/24762952/Jujutsu_Kaisen_season_2_01.jpg",
+      "https://economictimes.indiatimes.com/thumb/msid-102620444,width-1200,height-675,resizemode-4,imgsize-52502/jujutsu-kaisen-season-2-episode-6-release-date-time-what-to-expect-where-to-watch-live-streaming-details-and-more.jpg?from=mdr",
+      "https://www.animeexplained.com/wp-content/uploads/2023/06/jujutsu-kaisen-seaso-2-featured.webp",
+      "https://wegotthiscovered.com/wp-content/uploads/2022/09/jujutsu-kaisen-students.jpg"
+    ]
   },
   {
     name: "Nisekoi",
