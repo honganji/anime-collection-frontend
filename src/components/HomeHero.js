@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import "./Hero.css";
+import "./HomeHero.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faArrowLeft, faCircle } from '@fortawesome/free-solid-svg-icons';
 
@@ -42,7 +42,7 @@ export default function Hero(props) {
         </div>
         <div className='info-container'>
           <img className='anime_img' src={data[slideIndex - 1]["image_url"]} alt='trailer' />
-          <button className='btn monotone_btn detail_button' onClick={() => navigator('/detail')}>
+          <button className='btn monotone_btn detail_button' onClick={() => navigator(`/detail?id=${data[slideIndex - 1]["id"]}`)}>
             Detail Page
           </button>
         </div>
