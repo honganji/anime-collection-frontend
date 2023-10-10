@@ -1,0 +1,15 @@
+#class {
+  margin: 48px 96px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#class .title {
+  margin-right: auto;
+  margin-left: 32px;
+  font-size: 36px;
+  font-family: 'PT Serif', sans-serif;
+  font-weight: bolder;
+}
