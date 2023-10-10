@@ -1,3 +1,148 @@
 #detail-body {
   margin: 32px 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#detail-body img {
+  object-fit: cover;
+}
+
+#detail-body .title {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+#detail-body .video-iframe {
+  width: 800px;
+  height: 420px; 
+}
+
+#detail-body .thumnail {
+  width: 350px;
+  padding: 16px;
+}
+
+#detail-body .tv-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-items: space-between;
+  margin-bottom: 64px;
+}
+
+#detail-body .video-container {
+  margin-left: 100px;
+}
+
+#detail-body .btn-container {
+  display: flex;
+}
+
+#detail-body .monotone_btn {
+  background-color: #170D02;
+}
+
+#detail-body  .monotone_btn:disabled {
+  background-color: rgba(23, 13, 2, .50);
+  pointer-events: none;
+}
+
+#detail-body .monotone_btn:hover {
+  font-size: 24px;
+}
+
+#detail-body .story-title {
+  font-size: 36px;
+  text-decoration: underline;
+}
+
+#detail-body .story-container {
+  width: 60%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: start;
+}
+
+#detail-body .author-container {
+  width: 60%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: start;
+}
+
+#detail-body .author-title {
+  margin-bottom: 16px;
+  font-size: 36px;
+  text-decoration: underline;
+}
+
+#detail-body .author-img {
+  width: 400px;
+  height: 400px;
+}
+
+#detail-body .author-description {
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+#detail-body .author-feature-description {
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+#detail-body .author-feature-content {
+  font-size: 20px;
+  font-weight: 100;
+  text-align: start;
+  margin-top: 5px;
+}
+
+#detail-body .author-content {
+  font-size: 20px;
+  font-weight: 100;
+  text-align: start;
+}
+
+#detail-body .cv-container {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#detail-body .cv-sub-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+
+#detail-body .charactar-container {
+  width: 80%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#detail-body .character-img {
+  width: 300px;
+  height: 300px;
+}
+
+#detail-body .voice-actor-img {
+  width: 210px;
+  height: 210px;
+  margin-top: 90px;
 }

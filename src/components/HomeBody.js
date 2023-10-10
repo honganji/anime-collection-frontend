@@ -1,9 +1,9 @@
 import React from 'react';
-import "./Body.css";
+import "./HomeBody.css";
 import AnimeItem from './parts/AnimeItem';
 import TabBlock from './parts/TabBlock';
 
-export default function Body(props) {
+export default function HomeBody(props) {
 
   const dataList = props.animeList;
   function getTabs() {

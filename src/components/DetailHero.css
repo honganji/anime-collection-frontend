@@ -7,6 +7,10 @@
   justify-content: flex-end;
 }
 
+#detail-hero img {
+  object-fit: cover;
+}
+
 #detail-hero .left-container {
   display: flex;
   flex-direction: column;

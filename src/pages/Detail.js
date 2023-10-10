@@ -10,7 +10,7 @@ export default function Detail() {
   return (
     <div id='detail'>
       <DetailHero anime={animeList[params.get("id")]} />
-      <DetailBody />
+      <DetailBody anime={animeList[params.get("id")]} />
     </div>
   );
 }

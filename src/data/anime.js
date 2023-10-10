@@ -5,9 +5,12 @@ const animeList = [
     tailer_id: "O6qVieflwqs",
     mad_id: "IKG1QgS6YV8",
     author: "Gege Akutami",
+    author_img: "",
+    author_work: ["Kamishiro Chousa"],
     episodes: 24,
     serises: 2,
     description: "The story follows high school student Yuji Itadori as he joins a secret organization of Jujutsu Sorcerers in order to kill a powerful Curse named Ryomen Sukuna, of whom Yuji becomes the host.",
+    story: "In Jujutsu Kaisen, all living beings emanate energy called Cursed Energy (呪力, Juryoku), which arises from negative emotions that naturally flow throughout the body. Ordinary people cannot control this flow in their bodies. As a result, they continually lose Cursed Energy, resulting in the birth of Curses (呪い, Noroi), a race of spiritual beings whose primary desire is to bring harm to humanity. These Curses are shown as gruesome monsters, ghosts",
     genre: ["action"],
     started_date: 2020,
     images: [
@@ -16,6 +19,50 @@ const animeList = [
       "https://economictimes.indiatimes.com/thumb/msid-102620444,width-1200,height-675,resizemode-4,imgsize-52502/jujutsu-kaisen-season-2-episode-6-release-date-time-what-to-expect-where-to-watch-live-streaming-details-and-more.jpg?from=mdr",
       "https://www.animeexplained.com/wp-content/uploads/2023/06/jujutsu-kaisen-seaso-2-featured.webp",
       "https://wegotthiscovered.com/wp-content/uploads/2022/09/jujutsu-kaisen-students.jpg"
+    ],
+    characters: [
+      {
+        name: "Yuji Itadori",
+        img_url: "https://media.distractify.com/brand-img/v9KgvJpXq/0x0/jujutsu-kaisen-yuji-itadori-1690496548203.jpg",
+        feature: "Yuji exorcises Curses while trying to honor his grandfather's legacy and save others unconditionally so that when he is executed after eating all twenty fingers, he will not be alone in his death.",
+        voice_actor_name: "Junya Enoki",
+        voice_actor_img_url: "https://www.atomicmonkey.jp/atmnadmin-corporate/wp-content/uploads/2022/08/08e2dac12f2f0147d1e030aa3798e216.png"
+      },
+      {
+        name: "Satoru Gojo",
+        img_url: "https://www.looper.com/img/gallery/jujutsu-kaisen-what-are-the-six-eyes-skills-gojos-powers-explained/intro-1691590796.jpg",
+        feature: "He was first introduced in Akutami's short series Tokyo Metropolitan Curse Technical School as the mentor of the cursed teenager Yuta Okkotsu at Tokyo Prefectural Jujutsu High School. This miniseries became the prequel Jujutsu Kaisen 0 of Jujutsu Kaisen.",
+        voice_actor_name: "",
+        voice_actor_img_url: ""
+      },
+      {
+        name: "Megumi Fushiguro",
+        img_url: "https://staticg.sportskeeda.com/editor/2022/02/3b43b-16438708115932-1920.jpg",
+        feature: "He is a first-year student at Tokyo Jujutsu High, an academy to become a Jujutsu Sorcerer and develop Cursed Techniques to fight against Cursed Spirits, beings manifested from Cursed Energy due to negative emotions flowing from humans. He is a descendant to the Zenin family, one of the ultimate clans dominating the world of sorcery.",
+        voice_actor_name: "",
+        voice_actor_img_url: ""
+      },
+      {
+        name: "Maki Zen'in",
+        img_url: "https://img2.animatetimes.com/2022/01/61d653742cc33_ca6c42fb86d96326615bc5cda1a4331a.jpeg",
+        feature: "She is a young student from Jujutsu High, mentored by Satoru Gojo. While working on missions involving Curses, Maki mentors the newcomer Yuta Okkotsu who is trying to control the undead Rika which is attacking innocent people. ",
+        voice_actor_name: "",
+        voice_actor_img_url: ""
+      },
+      {
+        name: "Suguru Geto",
+        img_url: "https://static1.cbrimages.com/wordpress/wp-content/uploads/2023/02/jujutsu-kaisen-suguru-geto.jpg",
+        feature: "He seeks the Queen of Curses Rika Orimoto, who in turn is searching for the protagonist of the prequel series, Yuta Okkotsu. Geto also appears in the main series Jujutsu Kaisen series which, through flashbacks, further explores his friendship with Gojo and their eventual antagonism towards one another.",
+        voice_actor_name: "",
+        voice_actor_img_url: ""
+      },
+      {
+        name: "Nobara Kugisaki",
+        img_url: "https://static1.cbrimages.com/wordpress/wp-content/uploads/2022/07/Nobara-Kugisaki.jpg",
+        feature: "A first-year student at Tokyo Jujutsu High, an academy to hone Cursed Techniques to fight against Cursed Spirits arising from negative emotions from humans, she is under the tutelage of Satoru Gojo alongside Yuji Itadori and Megumi Fushiguro.",
+        voice_actor_name: "",
+        voice_actor_img_url: ""
+      },
     ]
   },
   {
