@@ -8,6 +8,7 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import BottomBar from './layout/BottomBar';
 import Detail from './pages/Detail';
+import Class from './pages/Class';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route exact path='/signup' element={<Signup />} />
           <Route exact path='/login' element={<Login />} />
           <Route exact path='/detail' element={<Detail />} />
+          <Route exact path='/class?' element={<Class />} />
         </Routes>
         <BottomBar />
       </Router>
