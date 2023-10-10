@@ -9,8 +9,8 @@ export default function Detail() {
   const [params] = useSearchParams();
   return (
     <div id='detail'>
-      <DetailHero anime={animeList[params.get("id")]} />
-      <DetailBody anime={animeList[params.get("id")]} />
+      <DetailHero anime={animeList[params.get("id") - 1]} />
+      <DetailBody anime={animeList[params.get("id") - 1]} />
     </div>
   );
 }
