@@ -7,7 +7,9 @@ const animeList = [
     author: "Gege Akutami",
     episodes: 24,
     serises: 2,
-    description: "The story follows high school student Yuji Itadori as he joins a secret organization of Jujutsu Sorcerers in order to kill a powerful Curse named Ryomen Sukuna, of whom Yuji becomes the host."
+    description: "The story follows high school student Yuji Itadori as he joins a secret organization of Jujutsu Sorcerers in order to kill a powerful Curse named Ryomen Sukuna, of whom Yuji becomes the host.",
+    genre: ["action"],
+    started_date: 2020
   },
   {
     name: "Nisekoi",
@@ -17,7 +19,9 @@ const animeList = [
     author: "Naoshi Komi",
     episodes: 20,
     serises: 2,
-    description: "The heir to a Yakuza Family is forced to be in a relationship with the daughter of the head of a gangster family to avoid a gang war, much to their chagrin. Raku Ichijou is an average high school student. He also happens to be the sole heir to the head of a Yakuza Family called the Shuei-gumi."
+    description: "The heir to a Yakuza Family is forced to be in a relationship with the daughter of the head of a gangster family to avoid a gang war, much to their chagrin. Raku Ichijou is an average high school student. He also happens to be the sole heir to the head of a Yakuza Family called the Shuei-gumi.",
+    genre: ["love"],
+    started_date: 2014
   },
   {
     name: "Naruto",
@@ -27,7 +31,9 @@ const animeList = [
     author: "Masashi Kishimoto",
     episodes: 720,
     serises: 2,
-    description: "Naruto is a story about a boy, a resident of the Hidden Leaf Village, who witnessed pain since he was born and strives hard to achieve recognition in his own village by vowing to himself to become the village leader. He shares a friendly relation with another kid Sasuke who is a genius unlike him who wishes to avenge the death of his clan by killing his elder brother."
+    description: "Naruto is a story about a boy, a resident of the Hidden Leaf Village, who witnessed pain since he was born and strives hard to achieve recognition in his own village by vowing to himself to become the village leader. He shares a friendly relation with another kid Sasuke who is a genius unlike him who wishes to avenge the death of his clan by killing his elder brother.",
+    genre: ["action"],
+    started_date: 2002
   },
   {
     name: "Toriko",
@@ -37,7 +43,9 @@ const animeList = [
     author: "Mitsutoshi Shimabukuro",
     episodes: 147,
     serises: 3,
-    description: "Toriko (トリコ) is a Japanese manga series written and illustrated by Mitsutoshi Shimabukuro. It follows the adventures of Toriko, a Gourmet Hunter, as he searches for rare, diverse foods to complete a full-course meal. On his journey, he is accompanied by a timid chef who wants to improve his skills."
+    description: "Toriko (トリコ) is a Japanese manga series written and illustrated by Mitsutoshi Shimabukuro. It follows the adventures of Toriko, a Gourmet Hunter, as he searches for rare, diverse foods to complete a full-course meal. On his journey, he is accompanied by a timid chef who wants to improve his skills.",
+    genre: ["action"],
+    started_date: 2011
   },
   {
     name: "Kingdom",
@@ -47,7 +55,9 @@ const animeList = [
     author: "Yasuhisa Hara",
     episodes: 77,
     serises: 4,
-    description: "Kingdom (キングダム, Kingudamu) is a Japanese seinen series written and illustrated by mangaka Yasuhisa Hara. It began its serialization on January 26, 2006, in Weekly Young Jump and was published by Shueisha Inc. where it is still being serialized."
+    description: "Kingdom (キングダム, Kingudamu) is a Japanese seinen series written and illustrated by mangaka Yasuhisa Hara. It began its serialization on January 26, 2006, in Weekly Young Jump and was published by Shueisha Inc. where it is still being serialized.",
+    genre: ["action"],
+    started_date: 2012
   }
 ];
 
