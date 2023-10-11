@@ -493,28 +493,28 @@ const animeList = [
     characters: [
       {
         name: "Akane Kinoshita ",
-        img_url: "https://static.wikia.nocookie.net/yamada-kun-to-lv999-no-koi-wo-suru/images/2/21/Akane_Kinoshita_Anime_Key_Visual_2.png/revision/latest/scale-to-width-down/250?cb=20230318110607",
+        img_url: "https://static.animecorner.me/2023/03/akane-kinoshita-1024x576.png",
         feature: "Akane is a college student and a casual player of FoS, which she started playing for her ex-boyfriend (who ironically cheated on her with fellow game player). She is mature, although sometimes a bit naive. She has a habit of keeping things and letting them pile up, as she treasures the presents she receives so much.",
         voice_actor_name: "",
         voice_actor_img_url: ""
       },
       {
         name: "Akito Yamada",
-        img_url: "https://static.wikia.nocookie.net/yamada-kun-to-lv999-no-koi-wo-suru/images/c/c2/Akito_Yamada_Anime_Portrait.png/revision/latest?cb=20230222130306",
+        img_url: "https://i.pinimg.com/736x/d0/1d/37/d01d372dc24bf33559df0898213f7770.jpg",
         feature: "A member of Akane's guild under name 'Yamada' his avatar is an emotionless afro male character. Akito is a 3rd year high school student who hardly expresses his emotions and thoughts. ",
         voice_actor_name: "",
         voice_actor_img_url: ""
       },
       {
         name: "Eita Sasaki",
-        img_url: "https://static.wikia.nocookie.net/yamada-kun-to-lv999-no-koi-wo-suru/images/1/1a/Eita_Sasaki_Portrait.png/revision/latest?cb=20230419145218",
+        img_url: "https://44.media.tumblr.com/a46e254031e699b424c6ab7fe3e17606/db715936afa79771-ed/s540x810_f1/81c4aee924fd02823b6c92c06201f98f23b758df.gif",
         feature: "A 19 year old college student who runs the guild 'Chocolate Rabbit' under a girl avatar named 'Rurihime.' Akito's childhood friend, he created the guild so his little sister could play in ease.",
         voice_actor_name: "",
         voice_actor_img_url: ""
       },
       {
         name: "Runa Sasaki",
-        img_url: "https://static.wikia.nocookie.net/yamada-kun-to-lv999-no-koi-wo-suru/images/5/5d/Runa_Sasaki_Portrait.png/revision/latest?cb=20230419145924",
+        img_url: "https://i.ytimg.com/vi/25x6ewqZk5s/maxresdefault.jpg",
         feature: "a's younger sister who is the model of Rurihime's appearance. She hates new people and thinks Chocolate Rabbit as her second home and initially wanted to kick Akane after their first meeting,",
         voice_actor_name: "",
         voice_actor_img_url: ""
