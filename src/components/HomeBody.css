@@ -6,12 +6,32 @@
   align-items: center;
 }
 
+@media only screen and (max-width: 500px) {
+  #home-body {
+    margin: 16px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 #home-body .title {
   margin-right: auto;
   margin-left: 32px;
   font-size: 36px;
   font-family: 'PT Serif', sans-serif;
   font-weight: bolder;
+}
+
+@media only screen and (max-width: 500px) {
+  #home-body .title {
+    margin-right: auto;
+    margin-left: 8px;
+    font-size: 24px;
+    font-family: 'PT Serif', sans-serif;
+    font-weight: bolder;
+  }
 }
 
 #home-body .tab-container {

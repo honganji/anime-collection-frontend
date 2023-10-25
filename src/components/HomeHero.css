@@ -163,6 +163,10 @@
   border: 2px #170D02 solid;
 }
 
+#home-hero .sp-fa {
+  display: none;
+}
+
 @media only screen and (max-width: 500px) {
   #home-hero .fa {
     display: none;
