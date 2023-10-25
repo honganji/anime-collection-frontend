@@ -54,7 +54,7 @@
 
 @media only screen and (max-width: 500px) {
   #home-hero .video-iframe {
-    width: 300px;
+    width: 280px;
     height: 200px;
     border: none;
   }
@@ -163,8 +163,23 @@
   border: 2px #170D02 solid;
 }
 
-#home-hero .sp-fa {
-  display: none;
+@media all and (min-width:700px) {
+  #home-hero .sp-fa {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #home-hero .fa {
+    display: none;
+  }
+
+  #home-hero .sp-fa {
+    width: 20px;
+    height: 20px;
+    margin: 0px 22px;
+    color: #170D02;
+  }
 }
 
 @media only screen and (max-width: 500px) {
