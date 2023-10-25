@@ -149,6 +149,154 @@ const animeList = [
   },
   {
     id: 3,
+    name: "Attack on Titan",
+    image_url: "https://preview.redd.it/attack-on-titan-poster-art-hope-u-all-like-it-checkout-my-v0-1vpip3olezd81.jpg?width=2500&format=pjpg&auto=webp&s=df7beb0ca30fcabe31b8462d289619cb380b9cbd",
+    tailer_id: "nQOM_h3RtmM",
+    mad_id: "XUXS5FXKnFs",
+    author: "Hajime Isayama",
+    author_img: "https://i.ytimg.com/vi/jf8CzUO0ZeQ/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGGUgUihPMA8=&rs=AOn4CLDMM2k2LHL6A6dioLIGqNXRyuGnmA",
+    author_work: ["Attack on Titan"],
+    episodes: 88,
+    serises: 5,
+    description: "Attack on Titan (Japanese: 進撃の巨人, Hepburn: Shingeki no Kyojin, lit. 'The Advancing Giant') is a Japanese manga series written and illustrated by Hajime Isayama.",
+    story: "Attack on Titan (Japanese: 進撃の巨人, Hepburn: Shingeki no Kyojin, lit. 'The Advancing Giant') is a Japanese manga series written and illustrated by Hajime Isayama. It is set in a world where humanity is forced to live in cities surrounded by three enormous walls that protect them from gigantic man-eating humanoids referred to as Titans; the story follows Eren Yeager, who vows to exterminate the Titans after they bring about the destruction of his hometown and the death of his mother. It was serialized in Kodansha's monthly magazine Bessatsu Shōnen Magazine from September 2009 to April 2021, with its chapters collected in 34 tankōbon volumes.",
+    genre: ["action"],
+    started_date: 2013,
+    images: [
+      "https://www.palcloset.jp/shared/pc_pal/event/baseyard/shingeki.tv-byt/images/main_kv.png",
+      "https://www.animax.co.jp/storage/programs/ct_series_f_schedule_image/nn10002484.png",
+      "https://times-abema.ismcdn.jp/mwimgs/7/b/-/img_7b193b04c0c156fd7f8becb87ae2b41b499144.jpg",
+      "https://eeo.today/media/wp-content/uploads/2022/01/07182352/SGK_ep17_checkQT_20211119.00_07_21_05.%E9%9D%99%E6%AD%A2%E7%94%BB074.jpg",
+      "https://storage.mantan-web.jp/images/2023/06/09/20230609dog00m200055000c/001_size6.jpg"
+    ],
+    characters: [
+      {
+        name: "Eren Yeager",
+        img_url: "https://www.hindustantimes.com/ht-img/img/2023/05/03/1600x900/eren-yeager-0_1683116765004_1683116776545.png",
+        feature: "The main hero (or antihero) of the series who, after witnessing his mother being devoured by a Titan while escaping his hometown as a young boy, dedicates his life to their eradication and joins the Survey Corps. After graduating fifth in his cadet class, he is swallowed by a bearded Titan during his first mission in Trost.",
+        voice_actor_name: "",
+        voice_actor_img_url: ""
+      },
+      {
+        name: "Mikasa Ackerman",
+        img_url: "https://pbs.twimg.com/media/EohQ5viUUAEHYDW.jpg",
+        feature: "Mikasa is Eren's childhood friend who was taken in by his family after seeing her parents brutally murdered by human traffickers. She is shown to feel a strong sense of gratitude toward them, especially Eren, who had saved her life and given her an iconic scarf. Her parents' tragic deaths had an overwhelming influence on her, causing her to lose her innocence and realize the world's cruelty.",
+        voice_actor_name: "",
+        voice_actor_img_url: ""
+      },
+      {
+        name: "Armin Arlert",
+        img_url: "https://i.pinimg.com/736x/64/db/5e/64db5ebec183b918f5ad254120c721f1.jpg",
+        feature: "Armin is Eren's and Mikasa's other childhood friend who joins them in order to help humanity and fulfill his dream of seeing the outside world. When Armin was young, his parents tried to venture beyond the Wall by creating a hot air balloon but were found out and killed by the First Interior Squad of the Military Police,",
+        voice_actor_name: "",
+        voice_actor_img_url: ""
+      },
+      {
+        name: "Reiner Braun",
+        img_url: "https://wallpapers.com/images/hd/reiner-braun-1080-x-1350-wallpaper-zt206yaxnsj1k6vv.jpg",
+        feature: "Reiner is a member of the Marleyan military's Warrior Unit and is the holder of the Armored Titan (鎧の巨人, Yoroi no Kyojin).[vol. 10-11] As the leader of the infiltration unit responsible for Marley's opening offensive against the Walls on the island of Paradis, he serves as one of the main antagonists for most of the story.",
+        voice_actor_name: "",
+        voice_actor_img_url: ""
+      },
+      {
+        name: "Keith Shadis",
+        img_url: "https://pm1.aminoapps.com/6437/6b2a3c86ed785681cf708c926ca8da8b0962f0a8_00.jpg",
+        feature: "The instructor who is in charge of training the 104th Corps recruits. His face and head are cleanly shaven except for a patch of beard beneath his chin.",
+        voice_actor_name: "",
+        voice_actor_img_url: ""
+      },
+      {
+        name: "Jean Kirstein",
+        img_url: "https://api.duniagames.co.id/api/content/upload/file/11458052531633502526.png",
+        feature: "A hot-headed young man who speaks his mind, he initially planned to join the Military Police in order to live safely within Wall Sheena and manages to graduate within the top ten of his class, ranking sixth.",
+        voice_actor_name: "",
+        voice_actor_img_url: ""
+      },
+      {
+        name: "Connie Springer",
+        img_url: "https://static1.cbrimages.com/wordpress/wp-content/uploads/2020/09/Connie.jpg",
+        feature: "Connie hails from the Ragako District of Wall Rose.[ch. 15] He sports a buzz cut[ch. 2] and has an outgoing and upbeat",
+        voice_actor_name: "",
+        voice_actor_img_url: ""
+      },
+      {
+        name: "Sasha Blouse",
+        img_url: "https://cdnb.artstation.com/p/assets/images/images/034/401/087/large/stayaliveplz-sasha.jpg?1612203742",
+        feature: "Sasha is a hunter from the mountainous Dauper District.[ch. 15] She is tall and lean, and her auburn hair is styled in a ponytail.[ch. 2] She is noted as a proficient hunter skilled with a bow and has remarkable hearing and instincts, but she also has issues with structure and authority.[vol. 4] She seems obsessed with food and was nicknamed 'Potato Girl' (芋女, Imo Onna) for eating one during a military training drill.",
+        voice_actor_name: "",
+        voice_actor_img_url: ""
+      },
+      {
+        name: "Krista Lenz",
+        img_url: "https://cdn.myanimelist.net/r/200x268/images/characters/3/414154.jpg?s=b28da995d4d9368f7b1c42047b642859",
+        feature: "A petite girl who is described as friendly, warm-hearted,[ch. 16][vol. 5:profiles] and popular to the point where her peers regard her as a goddess. Her fellow comrade Ymir and even Reiner are both noted to be very fond of her.",
+        voice_actor_name: "",
+        voice_actor_img_url: ""
+      },
+      {
+        name: "Levi Ackerman",
+        img_url: "https://ih1.redbubble.net/image.1560259746.7347/flat,750x,075,f-pad,750x1000,f8f8f8.jpg",
+        feature: "He is known as humanity's most powerful soldier and head of an elite squad in the Survey Corps. Hange remarks that he is a bit of a 'clean freak'.[26] While it is said that he is blunt and unapproachable, it is noted that he has a strong respect for authority, structure and discipline.",
+        voice_actor_name: "",
+        voice_actor_img_url: ""
+      },
+    ]
+  },
+  {
+    id: 4,
+    name: "Magi: The Labyrinth of Magic",
+    image_url: "https://www.themoviedb.org/t/p/original/htcydwrp69GeWmNFUf9Ja6wSzew.jpg",
+    tailer_id: "2E7o26G1T0c",
+    mad_id: "6QCplAFRUJg",
+    author: "Shinobu Ohtaka",
+    author_img: "https://www.babelio.com/users/AVT_Ohtaka-Shinobu_6706.jpg",
+    author_work: ["Sumomomo, Momomo"],
+    episodes: 50,
+    serises: 3,
+    description: "agi: The Labyrinth of Magic (マギ, Magi) is a Japanese fantasy adventure manga series written and illustrated by Shinobu Ohtaka. It was serialized in Shogakukan's shōnen manga magazine Weekly Shōnen Sunday from June 2009 to October 2017, with its chapters collected in 37 tankōbon volumes. In North America, the manga is licensed for English release by Viz Media.",
+    story: "Magi: The Labyrinth of Magic (マギ, Magi) is a Japanese fantasy adventure manga series written and illustrated by Shinobu Ohtaka. It was serialized in Shogakukan's shōnen manga magazine Weekly Shōnen Sunday from June 2009 to October 2017, with its chapters collected in 37 tankōbon volumes. In North America, the manga is licensed for English release by Viz Media. Taking place in a fantasy world that borrows elements from One Thousand and One Nights, the story follows a young boy named Aladdin and his traveling companion Alibaba, who go on adventures conquering dungeons to obtain valuable items, metal vessels, and powerful hosts capable of harnessing magic known as djinns. Upon completing their first dungeon, Aladdin learns of his identity as the titular Magi destined to ordain Alibaba to inherit the throne. As a result, the two decide to continue their travels all while forging friendships and rivalries along the way.",
+    genre: ["action"],
+    started_date: 2009,
+    images: [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShMNybQX6PPxapEl3Hr3Yfh_w7jBM0EFTcCdmEW6WN27OkXWaXC0RoB4sxEEKp7ErBAEM&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2V3ujpxVcFfHiSrQeO-9rmK0KF9P6czhFcg&usqp=CAU",
+      "https://nefariousreviews.files.wordpress.com/2021/04/magi-featured.jpg?w=672&h=372&crop=1",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSrTNxLOB8TekIOxjIGsD37vDs0K7pL0ItqA&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO-YBCMy4tx-KjtSpcYMRvDZN-nRE7mIeyYQ&usqp=CAU"
+    ],
+    characters: [
+      {
+        name: "Aladdin",
+        img_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzy23VW4OpAYdpCTRFg-sGhwMGfpNX31TbkQ&usqp=CAU",
+        feature: "Aladdin is a mysterious young boy with a huge djinn within his flute named Ugo. He travels in search of metal vessels that contain other djinns to find similar beings like Ugo. Aladdin enters the world with a pure and innocent, yet a wise and optimistic personality that dislikes fighting. ",
+        voice_actor_name: "",
+        voice_actor_img_url: ""
+      },
+      {
+        name: "Alibaba Saluja",
+        img_url: "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/1b05b290-efc5-46a3-a173-ebf27019d6ec/width=450/a79815b1e4e2cd5009cbb6d9fcf389f8b01bf201e590f153df367ffa6aae5272_aamAnyloraAnimeMixAnime_v1.jpeg",
+        feature: "Alibaba Saluja is an ambitious young man. Although he was originally from the slums, after his mother died, he was taken in by his father, Balbadd's King, as the third prince. Whenever possible, he began to study languages, economics, sword play, and more in order to learn how to become a good ruler.",
+        voice_actor_name: "",
+        voice_actor_img_url: ""
+      },
+      {
+        name: "Morgiana",
+        img_url: "https://i.ytimg.com/vi/X8lHchGx3bc/maxresdefault.jpg",
+        feature: "Descendant of the hunting tribe 'Fanalis', a red-haired girl who became emotionless and unfriendly due to her life as a slave, eventually opening herself to others after obtaining freedom.",
+        voice_actor_name: "",
+        voice_actor_img_url: ""
+      },
+      {
+        name: "Sinbad",
+        img_url: "https://www.animenewsnetwork.com/thumbnails/crop1200x630gY3/herald/29399/sinbad-anime-poster.png.jpg",
+        feature: "He is the King of Sindria and the leader of the Alliance of the Seven Seas. Born in the Parthevia Empire, Sinbad was 14 years old when he first captured a dungeon, the dungeon 'Baal'.",
+        voice_actor_name: "",
+        voice_actor_img_url: ""
+      },
+    ]
+  },
+  {
+    id: 5,
     name: "Naruto",
     image_url: "https://asset.watch.impress.co.jp/img/avw/docs/1518/304/na01_s.jpg",
     tailer_id: "yKELA1qBAKA",
@@ -201,7 +349,7 @@ const animeList = [
     ]
   },
   {
-    id: 4,
+    id: 6,
     name: "Toriko",
     image_url: "https://cdn.donmai.us/original/9e/dd/9edda34992a8da5a7dc0ac6ce458fe68.jpg",
     tailer_id: "Wpfl3-ZH6DQ",
@@ -254,7 +402,7 @@ const animeList = [
     ]
   },
   {
-    id: 5,
+    id: 7,
     name: "Kingdom",
     image_url: "https://kingdom-anime.com/images/sp/r_mv_l1.jpg",
     tailer_id: "bYudboNENqs",
@@ -319,7 +467,60 @@ const animeList = [
         voice_actor_img_url: ""
       },
     ]
-  }
+  },
+  {
+    id: 8,
+    name: "My Love Story with Yamada-kun at Lv999",
+    image_url: "https://upload.wikimedia.org/wikipedia/en/thumb/3/37/Loving_Yamada_at_Lv999%21_volume_1_cover.jpg/220px-Loving_Yamada_at_Lv999%21_volume_1_cover.jpg",
+    tailer_id: "TJn4CziJD04",
+    mad_id: "mTFCawNuz70",
+    author: "Mashiro",
+    author_img: "",
+    author_work: ["My Love Story with Yamada-kun at Lv999"],
+    episodes: 13,
+    serises: 1,
+    description: "My Love Story with Yamada-kun at Lv999 (Japanese: 山田くんとLv999の恋をする, Hepburn: Yamada-kun to Reberu Kyū-hyaku Kyū-jū Kyū no Koi o Suru) also known as Loving Yamada at Lv999! is a Japanese manga series written and illustrated by Mashiro.",
+    story: "The story follows the daily life of college student Akane Kinoshita. After getting dumped by her boyfriend, she continues the MMORPG Forest of Savior (FoS) they once played together and attended an offline event of the game. There she encounters an emotionless and handsome high school student named Akito Yamada. Yamada happens to belong to the same guild in the game as Akane, and after this encounter Akane begins to get closer to other members of the guild, especially Yamada.",
+    genre: ["love"],
+    started_date: 2019,
+    images: [
+      "https://i0.wp.com/anitrendz.net/news/wp-content/uploads/2023/06/LOVING_YAMADA_1080x1080b-e1687971909985.png?resize=696%2C391&ssl=1",
+      "https://i.ytimg.com/vi/1Ajmgri6EP4/hq720.jpg?sqp=-oaymwEXCK4FEIIDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCp1exW_b1iXBe2FUsfAO8enBsHVg",
+      "https://thesmartlocal.jp/wp-content/uploads/2022/10/My-Love-Story-with-Yamada-kun-At-Lv999-3.jpg",
+      "https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/ffad1b93800580a55173288141b9a321.jpe",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPA3y11heSIWDXmMfBw_zt2Nd9a8OLBptnFg&usqp=CAU"
+    ],
+    characters: [
+      {
+        name: "Akane Kinoshita ",
+        img_url: "https://static.animecorner.me/2023/03/akane-kinoshita-1024x576.png",
+        feature: "Akane is a college student and a casual player of FoS, which she started playing for her ex-boyfriend (who ironically cheated on her with fellow game player). She is mature, although sometimes a bit naive. She has a habit of keeping things and letting them pile up, as she treasures the presents she receives so much.",
+        voice_actor_name: "",
+        voice_actor_img_url: ""
+      },
+      {
+        name: "Akito Yamada",
+        img_url: "https://i.pinimg.com/736x/d0/1d/37/d01d372dc24bf33559df0898213f7770.jpg",
+        feature: "A member of Akane's guild under name 'Yamada' his avatar is an emotionless afro male character. Akito is a 3rd year high school student who hardly expresses his emotions and thoughts. ",
+        voice_actor_name: "",
+        voice_actor_img_url: ""
+      },
+      {
+        name: "Eita Sasaki",
+        img_url: "https://44.media.tumblr.com/a46e254031e699b424c6ab7fe3e17606/db715936afa79771-ed/s540x810_f1/81c4aee924fd02823b6c92c06201f98f23b758df.gif",
+        feature: "A 19 year old college student who runs the guild 'Chocolate Rabbit' under a girl avatar named 'Rurihime.' Akito's childhood friend, he created the guild so his little sister could play in ease.",
+        voice_actor_name: "",
+        voice_actor_img_url: ""
+      },
+      {
+        name: "Runa Sasaki",
+        img_url: "https://i.ytimg.com/vi/25x6ewqZk5s/maxresdefault.jpg",
+        feature: "a's younger sister who is the model of Rurihime's appearance. She hates new people and thinks Chocolate Rabbit as her second home and initially wanted to kick Akane after their first meeting,",
+        voice_actor_name: "",
+        voice_actor_img_url: ""
+      },
+    ]
+  },
 ];
 
 export default animeList;
