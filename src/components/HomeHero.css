@@ -163,7 +163,7 @@
   border: 2px #170D02 solid;
 }
 
-@media all and (min-width:700px) {
+@media all and (min-width:500px) {
   #home-hero .sp-fa {
     display: none;
   }
