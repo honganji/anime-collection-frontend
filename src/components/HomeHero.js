@@ -75,9 +75,13 @@ export default function Hero(props) {
 
   return (
     <div id='home-hero'>
-      <div className='arrow'>
-        <FontAwesomeIcon className='sp-fa' icon={faHandPointLeft} />
-      </div>
+      {slideIndex === 1
+        ? <div style={{ width: "64px" }}></div>
+        :
+        <div onClick={() => setSlideIndex(slideIndex - 1)}>
+          <FontAwesomeIcon className='sp-fa' icon={faHandPointLeft} />
+        </div>
+      }
       <div className='content-container'>
         <div className="container">
           {slideIndex === 1
@@ -110,9 +114,16 @@ export default function Hero(props) {
         </div>
         <div className='dot-container'>{generateDots()}</div>
       </div>
-      <div className='arrow'>
+      {/* <div className='arrow'>
         <FontAwesomeIcon className='sp-fa' icon={faHandPointRight} />
-      </div>
+      </div> */}
+      {slideIndex === 4
+        ? <div style={{ width: "64px" }}></div>
+        :
+        <div onClick={() => setSlideIndex(slideIndex + 1)}>
+          <FontAwesomeIcon className='sp-fa' icon={faHandPointRight} />
+        </div>
+      }
     </div>
   );
 }

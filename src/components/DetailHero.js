@@ -55,7 +55,7 @@ export default function DetailHero(props) {
     if (Math.abs(xDiff) > Math.abs(yDiff)) {
       if (xDiff > 0) {
         /* right swipe */
-        if (slideIndex < 4) {
+        if (slideIndex < 5) {
           setSlideIndex(slideIndex + 1);
         }
       } else {
@@ -71,7 +71,13 @@ export default function DetailHero(props) {
   };
   return (
     <div id='detail-hero'>
-      <FontAwesomeIcon className='sp-fa' icon={faHandPointLeft} />
+      {slideIndex === 1
+        ? <div style={{ width: "64px" }}></div>
+        :
+        <div onClick={() => setSlideIndex(slideIndex - 1)}>
+          <FontAwesomeIcon className='sp-fa' icon={faHandPointLeft} />
+        </div>
+      }
       <div className='content-container'>
         <div className="container">
           <div className='sub-container'>
@@ -98,7 +104,13 @@ export default function DetailHero(props) {
         </div>
         <div className='dot-container'>{generateDots()}</div>
       </div>
-      <FontAwesomeIcon className='sp-fa' icon={faHandPointRight} />
+      {slideIndex === 5
+        ? <div style={{ width: "64px" }}></div>
+        :
+        <div onClick={() => setSlideIndex(slideIndex + 1)}>
+          <FontAwesomeIcon className='sp-fa' icon={faHandPointRight} />
+        </div>
+      }
     </div>
   );
 }
