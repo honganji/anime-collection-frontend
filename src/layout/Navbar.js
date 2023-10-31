@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import "./Navbar.css";
 import Logo from '../components/parts/Logo';
@@ -29,7 +29,6 @@ export default function Navbar() {
     let uiList = [];
     const termObject = termList.filter((object) => {
       if (object["term"] === term) {
-        console.log(object);
         return object;
       }
     });
@@ -39,6 +38,9 @@ export default function Navbar() {
     });
     return uiList;
   }
+
+  // useEffect(() => { }, []);
+
   return (
     <div id='top-nav'>
       <div className='container' onClick={() => navigator('/')}>
