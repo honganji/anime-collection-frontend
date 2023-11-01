@@ -25,19 +25,19 @@ function CommentContainer(props) {
   }
 
   async function getData() {
-    const result = await axios.get(`http://localhost:8080/api/comments/${props.id}`);
+    const result = await axios.get(`https://anime-collection-api-v2.de.r.appspot.com/api/comments/${props.id}`);
     console.log(result.data);
     setData(result.data);
   }
 
   async function onSubmit(e) {
     e.preventDefault();
-    const postResult = await axios.post("http://localhost:8080/api/comments", {
+    const postResult = await axios.post("https://anime-collection-api-v2.de.r.appspot.com/api/comments", {
       "animeId": props.id,
       "userId": 1,
       "content": input
     });
-    const getResult = await axios.get(`http://localhost:8080/api/comments/${props.id}`);
+    const getResult = await axios.get(`https://anime-collection-api-v2.de.r.appspot.com/api/comments/${props.id}`);
     console.log(postResult.data);
     setData(getResult.data);
     setInput("");
