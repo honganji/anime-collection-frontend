@@ -3,6 +3,10 @@
   font-family: 'PT Serif', sans-serif;
 }
 
+body {
+  overscroll-behavior-y: none;
+}
+
 .btn {
   line-height: 48px;
   width: 128px;
