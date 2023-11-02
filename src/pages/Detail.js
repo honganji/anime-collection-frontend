@@ -24,6 +24,7 @@ export default function Detail() {
   }
 
   useEffect(() => {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
     getAnimeData();
   }, []);
   return (
