@@ -10,7 +10,7 @@ export default function Home() {
   const [isFetched, setIsFetched] = useState(false);
   const [data, setData] = useState([]);
 
-  const apiUrl = process.env.REACT_APP_IS_DEV ? process.env.REACT_APP_LOCALHOST_API_URL : process.env.REACT_APP_GCLOUD_API_URL;
+  const apiUrl = process.env.REACT_APP_IS_DEV !== "true" ? process.env.REACT_APP_LOCALHOST_API_URL : process.env.REACT_APP_GCLOUD_API_URL;
 
   let result;
   async function getAnimeData() {
