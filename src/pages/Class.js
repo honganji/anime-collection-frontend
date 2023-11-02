@@ -18,7 +18,7 @@ export default function Class() {
   let result;
   async function getAnimeData() {
     setIsFetched(false);
-    result = await axios.get("https://anime-collection-api-v2.de.r.appspot.com/api/animes");
+    result = await axios.get("http://localhost:8080/api/animes");
     console.log(result.data);
     // await new Promise((resolve) => setTimeout(resolve, 3000));
     // define item and classified anime list following the term

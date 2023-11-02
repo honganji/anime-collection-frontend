@@ -12,7 +12,7 @@ export default function Home() {
 
   let result;
   async function getAnimeData() {
-    result = await axios.get("https://anime-collection-api-v2.de.r.appspot.com/api/animes");
+    result = await axios.get("http://localhost:8080/api/animes");
     console.log(result.data);
     setData(result.data);
     setIsFetched(true);
