@@ -15,7 +15,7 @@ export default function Class() {
   const [data, setData] = useState([]);
   const [item, setItem] = useState("");
 
-  const apiUrl = process.env.REACT_APP_IS_DEV ? process.env.REACT_APP_LOCALHOST_API_URL : process.env.REACT_APP_GCLOUD_API_URL;
+  const apiUrl = process.env.REACT_APP_IS_DEV !== "true" ? process.env.REACT_APP_LOCALHOST_API_URL : process.env.REACT_APP_GCLOUD_API_URL;
 
   let result;
   async function getAnimeData() {
