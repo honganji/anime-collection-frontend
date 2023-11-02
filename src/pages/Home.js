@@ -19,6 +19,7 @@ export default function Home() {
   }
 
   useEffect(() => {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
     getAnimeData();
   }, []);
 
