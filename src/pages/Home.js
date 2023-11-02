@@ -11,12 +11,10 @@ export default function Home() {
   const [data, setData] = useState([]);
 
   const apiUrl = process.env.REACT_APP_IS_DEV ? process.env.REACT_APP_LOCALHOST_API_URL : process.env.REACT_APP_GCLOUD_API_URL;
-  console.log(`${apiUrl}/api/animes`);
 
   let result;
   async function getAnimeData() {
     result = await axios.get(`${apiUrl}/api/animes`);
-    console.log(result.data);
     setData(result.data);
     setIsFetched(true);
   }

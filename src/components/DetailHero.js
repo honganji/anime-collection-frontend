@@ -6,10 +6,7 @@ import { faArrowRight, faArrowLeft, faCircle, faHandPointLeft, faHandPointRight 
 export default function DetailHero(props) {
   const [slideIndex, setSlideIndex] = useState(1);
   const data = props.anime;
-  console.log(data);
   const imageUrlList = data["images"];
-  console.log(imageUrlList);
-  console.log(slideIndex);
 
   function generateDots() {
     let dotList = [];
@@ -23,7 +20,6 @@ export default function DetailHero(props) {
 
   useEffect(() => {
     var heroZone = document.getElementById("detail-hero");
-    console.log(heroZone);
     heroZone.addEventListener('touchstart', handleTouchStart, false);
     heroZone.addEventListener('touchmove', handleTouchMove, false);
   });

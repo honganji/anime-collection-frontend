@@ -21,9 +21,6 @@ export default function Class() {
   async function getAnimeData() {
     setIsFetched(false);
     result = await axios.get(`${apiUrl}/api/animes`);
-    console.log(result.data);
-    // await new Promise((resolve) => setTimeout(resolve, 3000));
-    // define item and classified anime list following the term
     if (term === "Genre") {
       setItem((params.get("item")).charAt(0).toUpperCase() + (params.get("item")).slice(1));
       list = result.data.filter((anime) => {
@@ -34,7 +31,6 @@ export default function Class() {
     } else {
       setItem(`${params.get("item")} ~ ${Number(params.get("item")) + 9}`);
       list = result.data.filter((anime) => {
-        console.log(Number.parseInt(anime.started_date.slice(0, 4)));
         if (Number.parseInt(anime.started_date.slice(0, 4)) >= params.get("item") && Number.parseInt(anime.started_date.slice(0, 4)) <= Number(params.get("item")) + 9) {
           return anime;
         }
