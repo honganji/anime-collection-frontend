@@ -4,9 +4,10 @@ import Logo from '../components/parts/Logo';
 import linkedIn from '../assets/linkedin.svg';
 import medium from '../assets/medium.svg';
 import twitter from '../assets/twitter.svg';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 export default function BottomBar() {
+  const navigator = useNavigate();
   const url = useLocation();
   const pattern = /signup|login/g;
   const result = pattern.test(url.pathname);
@@ -15,7 +16,9 @@ export default function BottomBar() {
       ? <></>
       : <div id='bottom-bar'>
         <div className='left'>
-          <Logo />
+          <div className='container' onClick={() => navigator('/')}>
+            <Logo />
+          </div>
           <div className='copyright'>(c) copyright Yuji Toshihiro 2023. All right reserves</div>
         </div>
         <div className='right'>

@@ -1,21 +1,46 @@
 #detail-hero {
   background-color: rgba(23, 13, 2, .75);
   height: 74vh;
+  width: 100vw;
   color: black;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 
+@media only screen and (max-width: 500px) {
+  #detail-hero {
+    background-color: rgba(23, 13, 2, .75);
+    height: 280px;
+    width: 100vw;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+#detail-hero .content-container {
+  display: flex;
+  flex-direction: column;
+}
+
 #detail-hero img {
   object-fit: cover;
 }
 
-#detail-hero .left-container {
+#detail-hero .sub-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+}
+
+@media only screen and (max-width: 500px) {
+  #detail-hero .sub-container {
+    display: none;
+  }
 }
 
 #detail-hero .container {
@@ -44,6 +69,12 @@
   align-self: center;
 }
 
+@media only screen and (max-width: 500px) {
+  #detail-hero .fa {
+    display: none;
+  }
+}
+
 #detail-hero .fa:hover {
   width: 52px;
   height: 52px;
@@ -56,14 +87,52 @@
   color: white;
 }
 
+@media only screen and (max-width: 500px) {
+  #detail-hero .dot {
+    width: 10px;
+    height: 10px;
+    color: white;
+  }
+}
+
 #detail-hero .sub-image {
-  width: 350px;
+  width: 320px;
   height: 200px;
   opacity: 0.50;
   padding: 100px 30px 0px;
+}
+@media only screen and (max-width: 500px) {
+  #detail-hero .sub-image {
+    display: none;
+  }
 }
 
 #detail-hero .main-image {
   width: 900px;
   height: 600px;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 500px) {
+  #detail-hero .main-image {
+    width: 280px;
+    height: 170px;
+    object-fit: cover;
+  }
+}
+
+@media all and (min-width:500px) {
+  #detail-hero .sp-fa {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+
+  #detail-hero .sp-fa {
+    width: 20px;
+    height: 20px;
+    margin: 0px 16px;
+    color: #170D02;
+  }
 }

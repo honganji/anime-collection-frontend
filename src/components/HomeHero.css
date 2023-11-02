@@ -7,16 +7,57 @@
   justify-content: flex-end;
 }
 
+@media only screen and (max-width: 500px) {
+  #home-hero {
+    background-color: rgba(23, 13, 2, .25);
+    height: 320px;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+#home-hero .content-container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 500px) {
+  #home-hero .content-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 #home-hero .container {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
+@media only screen and (max-width: 500px) {
+  #home-hero .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 #home-hero .video-iframe {
   width: 908px;
   height: 560px;
   border: none;
+}
+
+@media only screen and (max-width: 500px) {
+  #home-hero .video-iframe {
+    width: 280px;
+    height: 200px;
+    border: none;
+  }
 }
 
 #home-hero .btn-container {
@@ -36,14 +77,36 @@
   font-size: 24px;
 }
 
+@media only screen and (max-width: 500px) {
+  #home-hero .monotone_btn:hover {
+    font-size: 18px;
+  }
+}
+
 #home-hero .info-container {
   margin-left: auto;
   margin-right: auto;
   margin-top: auto;
 }
 
+@media only screen and (max-width: 500px) {
+  #home-hero .info-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    display: none;
+  }
+}
+
 #home-hero .anime_img {
   width: 304px;
+}
+
+@media only screen and (max-width: 500px) {
+  #home-hero .anime_img {
+    width: 25%;
+  }
 }
 
 #home-hero .detail_button {
@@ -54,12 +117,30 @@
   font-size: 18px;
 }
 
+@media only screen and (max-width: 500px) {
+  #home-hero .detail_button {
+    font-size: 16px;
+  }
+}
+
 #home-hero .detail_button:hover {
   font-size: 20px;
 }
 
+@media only screen and (max-width: 500px) {
+  #home-hero .detail_button:hover {
+    font-size: 18px;
+  }
+}
+
 #home-hero .detail_button:active {
   font-size: 20px;
+}
+
+@media only screen and (max-width: 500px) {
+  #home-hero .detail_button:active {
+    font-size: 18px;
+  }
 }
 
 #home-hero .dot-container {
@@ -82,6 +163,38 @@
   border: 2px #170D02 solid;
 }
 
+@media all and (min-width:500px) {
+  #home-hero .sp-fa {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #home-hero .fa {
+    display: none;
+  }
+
+  #home-hero .sp-fa {
+    width: 20px;
+    height: 20px;
+    margin: 0px 22px;
+    color: #170D02;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #home-hero .fa {
+    display: none;
+  }
+
+  #home-hero .sp-fa {
+    width: 20px;
+    height: 20px;
+    margin: 0px 22px;
+    color: #170D02;
+  }
+}
+
 #home-hero .fa:hover {
   width: 52px;
   height: 52px;
@@ -92,4 +205,12 @@
   width: 20px;
   height: 20px;
   color: white;
+}
+
+@media only screen and (max-width: 500px) {
+  #home-hero .dot {
+    width: 10px;
+    height: 10px;
+    color: white;
+  }
 }

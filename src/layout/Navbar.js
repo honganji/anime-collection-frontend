@@ -3,6 +3,8 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import "./Navbar.css";
 import Logo from '../components/parts/Logo';
 import termList from '../data/term';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Navbar() {
   const navigator = useNavigate();
@@ -39,7 +41,17 @@ export default function Navbar() {
     return uiList;
   }
 
-  // useEffect(() => { }, []);
+  function hundleMenu() {
+    var content = document.querySelector("#top-nav").querySelector(".humbergar-menu-content");
+    var icon = document.querySelector("#top-nav").querySelector(".humbergar-menu-icon");
+    if (content.style.display === "none") {
+      content.style.display = "block";
+      icon.style.opacity = "0.30";
+    } else {
+      content.style.display = "none";
+      icon.style.opacity = "0.90";
+    }
+  }
 
   return (
     <div id='top-nav'>
@@ -75,6 +87,29 @@ export default function Navbar() {
               {generateSummery("timeline")}
             </div>
           </details>
+        </div>
+      </div>
+      <div className='humbegar-menu-container'>
+        <div className='humbergar-menu-content'>
+          <div className='humbergar-menu-content-container'>
+            {
+              !url.state
+                ? <div>
+                  <div className='dropdown-item' onClick={() => navigator('/signup')}>Signup</div>
+                  <div className='dropdown-item' onClick={() => navigator('/login')}>Log in</div>
+                </div>
+                : <div className='dropdown-item' onClick={() => navigator('/')}>Log Out</div>
+            }
+            <details className='dropdown'>
+              <summary>Genre</summary>
+              <div className='dropdown-container'>
+                {generateSummery("genre")}
+              </div>
+            </details>
+          </div>
+        </div>
+        <div className='humbergar-menu-icon' onClick={() => hundleMenu()}>
+          <FontAwesomeIcon className='sp-fa' icon={faBars} />
         </div>
       </div>
     </div>
