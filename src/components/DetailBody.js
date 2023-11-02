@@ -29,7 +29,7 @@ export default function DetailBody(props) {
         <div className='author-title'>Author</div>
         <img className='author-img' src={data["author_img"] === "" ? "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/434px-Unknown_person.jpg" : data["author_img"]} alt='author_img' />
         <div className='author-description'>Name:&nbsp;<div className='author-content'>{data["author"]}</div></div>
-        <div className='author-description'>Work:&nbsp;<div className='author-content'>{`${data["author_work"].join(", ")}, etc.`}</div></div>
+        <div className='author-description'>Work:&nbsp;<div className='author-content'>{`${data["author_works"].join(", ")}, etc.`}</div></div>
       </div>
       <div className='cv-container'>
         <div className='cv-title'>Characters</div>
