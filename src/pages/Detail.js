@@ -13,10 +13,12 @@ export default function Detail() {
   const [isFetched, setIsFetched] = useState(false);
   const [data, setData] = useState([]);
 
+  const apiUrl = process.env.REACT_APP_ENV === "DEV" ? process.env.REACT_APP_LOCALHOST_API_URL : process.env.REACT_APP_GCLOUD_API_URL;
+
   let result;
   async function getAnimeData() {
     console.log(params.get("id"));
-    result = await axios.get(`https://anime-collection-api-v2.de.r.appspot.com/api/animes/${params.get("id")}`);
+    result = await axios.get(`${apiUrl}/api/animes/${params.get("id")}`);
     console.log(result.data);
     // await new Promise((resolve) => setTimeout(resolve, 3000));
     setData(result.data[0]);
