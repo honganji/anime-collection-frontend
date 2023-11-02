@@ -11,6 +11,7 @@ export default function Signup() {
     email: "",
     password: ""
   });
+  console.log(process.env.REACT_APP_LOCALHOST_API_URL);
 
   const { name, email, password } = user;
 
