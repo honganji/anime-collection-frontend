@@ -12,7 +12,7 @@ function CommentContainer(props) {
   const [data, setData] = useState({});
   const [input, setInput] = useState("");
 
-  const apiUrl = process.env.REACT_APP_ENV === "DEV" ? process.env.REACT_APP_LOCALHOST_API_URL : process.env.REACT_APP_GCLOUD_API_URL;
+  const apiUrl = process.env.REACT_APP_IS_DEV ? process.env.REACT_APP_LOCALHOST_API_URL : process.env.REACT_APP_GCLOUD_API_URL;
 
   function onInputChange(e) {
     setInput(e.target.value);
@@ -33,6 +33,7 @@ function CommentContainer(props) {
   }
 
   async function onSubmit(e) {
+    e.preventDefault();
     const postResult = await axios.post(`${apiUrl}/api/comments`, {
       "animeId": props.id,
       "userId": 1,
