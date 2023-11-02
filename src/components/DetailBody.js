@@ -14,7 +14,7 @@ export default function DetailBody(props) {
       <div className='tv-container'>
         <img className='thumnail' src={data["image_url"]} alt='author_img' />
         <div className='video-container'>
-          <iframe className='video-iframe' src={`https://www.youtube.com/embed/${isMad ? data["mad_id"] : data["tailer_id"]}`} title='trailer'></iframe>
+          <iframe className='video-iframe' src={`https://www.youtube.com/embed/${isMad ? data["mad_id"] : data["trailer_id"]}`} title='trailer'></iframe>
           <div className='btn-container'>
             <button className='btn monotone_btn' disabled={!isMad ? true : false} onClick={() => switchVideoType()}>Trailer</button>
             <button className='btn monotone_btn' disabled={isMad ? true : false} onClick={() => switchVideoType()}>MAD</button>

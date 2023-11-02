@@ -1,0 +1,17 @@
+#comment {
+  width: 28vw;
+  height: 10vh;
+  background-color: white;
+  border: 1.5px solid #170D02;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: start;
+  padding: 5px;
+  margin: 5px;
+}
+
+#comment .user-name {
+  text-decoration: underline;
+}
