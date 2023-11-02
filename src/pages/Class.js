@@ -15,10 +15,12 @@ export default function Class() {
   const [data, setData] = useState([]);
   const [item, setItem] = useState("");
 
+  const apiUrl = process.env.REACT_APP_IS_DEV ? process.env.REACT_APP_LOCALHOST_API_URL : process.env.REACT_APP_GCLOUD_API_URL;
+
   let result;
   async function getAnimeData() {
     setIsFetched(false);
-    result = await axios.get("https://anime-collection-api-v2.de.r.appspot.com/api/animes");
+    result = await axios.get(`${apiUrl}/api/animes`);
     console.log(result.data);
     // await new Promise((resolve) => setTimeout(resolve, 3000));
     // define item and classified anime list following the term
