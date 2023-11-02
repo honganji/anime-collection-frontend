@@ -4,15 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import Comment from './Comment';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
 
 function CommentContainer(props) {
-  const navigator = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const [data, setData] = useState({});
   const [input, setInput] = useState("");
-
-  const apiUrl = process.env.REACT_APP_IS_DEV ? process.env.REACT_APP_LOCALHOST_API_URL : process.env.REACT_APP_GCLOUD_API_URL;
 
   function onInputChange(e) {
     setInput(e.target.value);
@@ -27,20 +23,18 @@ function CommentContainer(props) {
   }
 
   async function getData() {
-    const result = await axios.get(`${apiUrl}/api/comments/${props.id}`);
-    console.log(result.data);
+    const result = await axios.get(`https://anime-collection-api-v2.de.r.appspot.com/api/comments/${props.id}`);
     setData(result.data);
   }
 
   async function onSubmit(e) {
     e.preventDefault();
-    const postResult = await axios.post(`${apiUrl}/api/comments`, {
+    const postResult = await axios.post("https://anime-collection-api-v2.de.r.appspot.com/api/comments", {
       "animeId": props.id,
       "userId": 1,
       "content": input
     });
-    const getResult = await axios.get(`${apiUrl}/api/comments/${props.id}`);
-    console.log(postResult.data);
+    const getResult = await axios.get(`https://anime-collection-api-v2.de.r.appspot.com/api/comments/${props.id}`);
     setData(getResult.data);
     setInput("");
   }
@@ -57,10 +51,10 @@ function CommentContainer(props) {
               <div className='comments'>
                 {generateComments()}
               </div>
-              <form onSubmit={(e) => onSubmit(e)} >
+              <form onSubmit={(e) => onSubmit(e)}>
                 <div className='input-box'>
                   <div className='item'>Comment</div>
-                  <textarea className='box' placeholder={`write your comment!`} name={"input"} value={input} onChange={(e) => onInputChange(e)}></textarea>
+                  <input className='box' type='text' placeholder={`write your comment!`} name={"input"} value={input} onChange={(e) => onInputChange(e)}></input>
                 </div>
                 <button type='submit' className='btn colored-btn send-btn'>Send</button>
               </form>

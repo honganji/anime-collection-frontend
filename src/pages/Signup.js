@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import "./Signup.css";
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
 import Input from '../components/parts/Input';
 
 export default function Signup() {
@@ -11,7 +10,6 @@ export default function Signup() {
     email: "",
     password: ""
   });
-  console.log(process.env.REACT_APP_LOCALHOST_API_URL);
 
   const { name, email, password } = user;
 

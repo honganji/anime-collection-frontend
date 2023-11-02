@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Detail.css';
 import DetailHero from '../components/DetailHero';
-import animeList from '../data/anime';
 import { useSearchParams } from 'react-router-dom';
 import DetailBody from '../components/DetailBody';
 import axios from 'axios';
@@ -17,10 +16,7 @@ export default function Detail() {
 
   let result;
   async function getAnimeData() {
-    console.log(params.get("id"));
     result = await axios.get(`${apiUrl}/api/animes/${params.get("id")}`);
-    console.log(result.data);
-    // await new Promise((resolve) => setTimeout(resolve, 3000));
     setData(result.data[0]);
     setIsFetched(true);
   }

@@ -26,7 +26,6 @@ export default function Hero(props) {
 
   useEffect(() => {
     var heroZone = document.getElementById("home-hero");
-    console.log(heroZone);
     heroZone.addEventListener('touchstart', handleTouchStart, false);
     heroZone.addEventListener('touchmove', handleTouchMove, false);
   });
