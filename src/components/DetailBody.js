@@ -32,7 +32,7 @@ export default function DetailBody(props) {
         <div className='author-description'>Work:&nbsp;<div className='author-content'>{`${data["author_work"].join(", ")}, etc.`}</div></div>
       </div>
       <div className='cv-container'>
-        <div className='author-title'>Characters</div>
+        <div className='cv-title'>Characters</div>
         <div className='cv-sub-container'>
           {
             data["characters"].map((character) => {
