@@ -45,6 +45,7 @@
 }
 
 #top-nav .upper-menu {
+  /* TODO: show if when you implement login function */
   display: none;
   justify-content: center;
   align-items: center;
@@ -165,7 +166,6 @@
   }
 
   #top-nav .hamburger-menu-icon {
-    display: none;
     padding-right: 10px;
     padding-top: 15px;
     color: #170D02;
@@ -212,6 +212,8 @@
   }
 
   #top-nav .dropdown-item {
+    /* TODO: show if when you implement login function */
+    display: none;
     font-weight:600;
   }
 }

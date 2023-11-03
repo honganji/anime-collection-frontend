@@ -1,4 +1,5 @@
 #comment-container {
+  /* TODO: show if when you implement login function */
   display: none;
   position: fixed;
   bottom: 0px;
