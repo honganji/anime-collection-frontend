@@ -42,8 +42,8 @@ export default function Navbar() {
   }
 
   function hundleMenu() {
-    var content = document.querySelector("#top-nav").querySelector(".humbergar-menu-content");
-    var icon = document.querySelector("#top-nav").querySelector(".humbergar-menu-icon");
+    var content = document.querySelector("#top-nav").querySelector(".hamburger-menu-content");
+    var icon = document.querySelector("#top-nav").querySelector(".hamburger-menu-icon");
     if (content.style.display === "none") {
       content.style.display = "block";
       icon.style.opacity = "0.30";
@@ -89,9 +89,9 @@ export default function Navbar() {
           </details>
         </div>
       </div>
-      <div className='humbegar-menu-container'>
-        <div className='humbergar-menu-content'>
-          <div className='humbergar-menu-content-container'>
+      <div className='hamburger-menu-container'>
+        <div className='hamburger-menu-content'>
+          <div className='hamburger-menu-content-container'>
             {
               !url.state
                 ? <div>
@@ -108,7 +108,7 @@ export default function Navbar() {
             </details>
           </div>
         </div>
-        <div className='humbergar-menu-icon' onClick={() => hundleMenu()}>
+        <div className='hamburger-menu-icon' onClick={() => hundleMenu()}>
           <FontAwesomeIcon className='sp-fa' icon={faBars} />
         </div>
       </div>

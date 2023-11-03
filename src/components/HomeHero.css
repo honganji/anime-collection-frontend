@@ -47,8 +47,8 @@
 }
 
 #home-hero .video-iframe {
-  width: 908px;
-  height: 560px;
+  width: 60vw;
+  height: 59.7vh;
   border: none;
 }
 
@@ -100,7 +100,9 @@
 }
 
 #home-hero .anime_img {
-  width: 304px;
+  width: 20vw;
+  height: 50vh;
+  object-fit: cover;
 }
 
 @media only screen and (max-width: 500px) {
