@@ -1,6 +1,9 @@
 <p align="center">
   <br />
   <img src="./public/desktop/home/home_1.png" alt="home"/>
+  <div align="center">
+    <a href="https://anime-collection-fullstack.vercel.app/">https://anime-collection-fullstack.vercel.app/</a>
+  </div>
   <br/>
   <br />
   <p align="center">
