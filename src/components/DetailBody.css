@@ -22,13 +22,14 @@
   font-size: 40px;
   font-weight: bold;
   align-self: flex-start;
+  padding: 16px;
 }
 
 @media only screen and (max-width: 500px) {
   #detail-body .title {
     font-size: 30px;
     font-weight: bold;
-    align-self: center;
+    align-self: flex-start;
   }
 }
 
