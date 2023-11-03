@@ -1,6 +1,6 @@
 #home-hero {
   background-color: rgba(23, 13, 2, .75);
-  height: 74vh;
+  height: 600px;
   color: black;
   display: flex;
   flex-direction: column;
@@ -47,8 +47,8 @@
 }
 
 #home-hero .video-iframe {
-  width: 60vw;
-  height: 59.7vh;
+  width: 768px;
+  height: 488px;
   border: none;
 }
 
@@ -100,8 +100,8 @@
 }
 
 #home-hero .anime_img {
-  width: 20vw;
-  height: 50vh;
+  width: 224px;
+  height: 360px;
   object-fit: cover;
 }
 
