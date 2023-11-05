@@ -23,3 +23,17 @@
   font-family: 'PT Serif', sans-serif;
   font-weight: bolder;
 }
+
+#class-tail-spin {
+  height: 73vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#class-tail-spin .message {
+  font-size: 32px;
+  font-weight: bold;
+}

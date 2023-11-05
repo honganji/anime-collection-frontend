@@ -4,6 +4,7 @@ import Hero from '../components/HomeHero';
 import HomeBody from '../components/HomeBody';
 import axios from 'axios';
 import { TailSpin } from 'react-loader-spinner';
+import Indicator from '../components/parts/Indicator';
 
 export default function Home() {
 
@@ -26,20 +27,10 @@ export default function Home() {
 
   return (
     isFetched ?
-      <div>
+      <div id='home'>
         <Hero animeList={data} />
         <HomeBody animeList={data} />
       </div>
-      : <div className='tail-spin'>
-        <TailSpin height="80"
-          width="80"
-          color="#DC8C37"
-          ariaLabel="tail-spin-loading"
-          radius="1"
-          wrapperStyle={{}}
-          wrapperClass=""
-          visible={true}
-        />
-      </div>
+      : <Indicator />
   );
 }
