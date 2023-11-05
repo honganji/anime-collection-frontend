@@ -6,6 +6,7 @@ import DetailBody from '../components/DetailBody';
 import axios from 'axios';
 import { TailSpin } from 'react-loader-spinner';
 import CommentContainer from '../components/parts/CommentContainer';
+import Indicator from '../components/parts/Indicator';
 
 export default function Detail() {
   const [params] = useSearchParams();
@@ -32,16 +33,6 @@ export default function Detail() {
         <DetailHero anime={data} />
         <DetailBody anime={data} />
       </div>
-      : <div className='tail-spin'>
-        <TailSpin height="80"
-          width="80"
-          color="#DC8C37"
-          ariaLabel="tail-spin-loading"
-          radius="1"
-          wrapperStyle={{}}
-          wrapperClass=""
-          visible={true}
-        />
-      </div>
+      : <Indicator />
   );
 }
