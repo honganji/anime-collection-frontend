@@ -1,6 +1,6 @@
 #comment-container {
   /* TODO: show if when you implement login function */
-  display: none;
+  display: inline-block;
   position: fixed;
   bottom: 0px;
   right: 0px;

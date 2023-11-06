@@ -3,25 +3,23 @@ import { useSearchParams } from 'react-router-dom';
 import TabBlock from '../components/parts/TabBlock';
 import AnimeItem from '../components/parts/AnimeItem';
 import "./Class.css";
-import axios from 'axios';
-import { TailSpin } from 'react-loader-spinner';
 import Indicator from '../components/parts/Indicator';
+import { request } from '../helpers/axios_helpers';
 
 export default function Class() {
   const [params] = useSearchParams();
   const term = (params.get("term")).charAt(0).toUpperCase() + (params.get("term")).slice(1);
-  // let item = "";
   let list = [];
   const [isFetched, setIsFetched] = useState(false);
   const [data, setData] = useState([]);
   const [item, setItem] = useState("");
 
-  const apiUrl = process.env.REACT_APP_IS_DEV === "true" ? process.env.REACT_APP_LOCALHOST_API_URL : process.env.REACT_APP_GCLOUD_API_URL;
-
-  let result;
   async function getAnimeData() {
     setIsFetched(false);
-    result = await axios.get(`${apiUrl}/api/animes`);
+    const result = await request(
+      "GET",
+      "/api/animes"
+    );
     if (term === "Genre") {
       setItem((params.get("item")).charAt(0).toUpperCase() + (params.get("item")).slice(1));
       list = result.data.filter((anime) => {
@@ -46,7 +44,6 @@ export default function Class() {
     getAnimeData();
   }, [params.get("item")]);
 
-  // get tabs
   function getTabs() {
     const numOfTabs = Math.floor(data.length / 10);
     return <TabBlock numOfTabs={numOfTabs} />;

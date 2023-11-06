@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import "./Navbar.css";
 import Logo from '../components/parts/Logo';
@@ -12,9 +12,8 @@ export default function Navbar() {
 
   // check current login state
   // For Dev
-  const state = window.localStorage.getItem('name') ?? { name: "Guest" };
-  const pattern = /signup|login/g;
-  const result = pattern.test(url.pathname);
+  const name = Boolean(window.localStorage.getItem('name')) ? window.localStorage.getItem('name') : "Guest";
+  const isLogin = window.localStorage.getItem('isLogin');
 
   // control details elements open state
   var details = [...document.querySelectorAll('details')];
@@ -41,7 +40,14 @@ export default function Navbar() {
     return uiList;
   }
 
-  function hundleMenu() {
+  function logOut() {
+    window.localStorage.setItem('name', "");
+    window.localStorage.setItem('isLogin', false);
+    window.localStorage.setItem('id', 0);
+    navigator('/')
+  }
+
+  function handleMenu() {
     var content = document.querySelector("#top-nav").querySelector(".hamburger-menu-content");
     var icon = document.querySelector("#top-nav").querySelector(".hamburger-menu-icon");
     if (content.style.display === "none") {
@@ -53,6 +59,8 @@ export default function Navbar() {
     }
   }
 
+  // useEffect(() => { }, [window.localStorage.getItem('isLogin')])
+
   return (
     <div id='top-nav'>
       <div className='container' onClick={() => navigator('/')}>
@@ -60,19 +68,17 @@ export default function Navbar() {
       </div>
       <div className='menu'>
         {
-          result
-            ? <></>
-            : <div className='upper-menu'>
-              <div className='greet'>Welcome {state.name}</div>
-              {
-                !url.state
-                  ? <div>
-                    <button className='btn colored-btn' onClick={() => navigator('/signup')}>Signup</button>
-                    <button className='btn colored-btn' onClick={() => navigator('/login')}>Log in</button>
-                  </div>
-                  : <button className='btn colored-btn' onClick={() => navigator('/')}>Log Out</button>
-              }
-            </div>
+          <div className='upper-menu'>
+            <div className='greet'>Welcome {name}</div>
+            {
+              isLogin == "true" ?
+                <button className='btn colored-btn' onClick={() => logOut()}>Log Out</button>
+                : <div>
+                  <button className='btn colored-btn' onClick={() => navigator('/signup')}>Signup</button>
+                  <button className='btn colored-btn' onClick={() => navigator('/login')}>Log in</button>
+                </div>
+            }
+          </div>
         }
         <div className='lower-menu'>
           <details className='dropdown'>
@@ -108,7 +114,7 @@ export default function Navbar() {
             </details>
           </div>
         </div>
-        <div className='hamburger-menu-icon' onClick={() => hundleMenu()}>
+        <div className='hamburger-menu-icon' onClick={() => handleMenu()}>
           <FontAwesomeIcon className='sp-fa' icon={faBars} />
         </div>
       </div>

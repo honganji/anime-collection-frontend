@@ -37,4 +37,6 @@
 
 #comment .user-name {
   text-decoration: underline;
+  font-size: 16px;
+  padding-bottom: 3px;
 }
