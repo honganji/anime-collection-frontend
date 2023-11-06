@@ -9,6 +9,8 @@ import { request } from '../helpers/axios_helpers';
 
 export default function Detail() {
   const [params] = useSearchParams();
+
+  // variable to judge if the data is fetched
   const [isFetched, setIsFetched] = useState(false);
   const [data, setData] = useState([]);
 
@@ -22,9 +24,11 @@ export default function Detail() {
   }
 
   useEffect(() => {
+    // go to the top area
     document.body.scrollTop = document.documentElement.scrollTop = 0;
     getAnimeData();
   }, []);
+
   return (
     isFetched ?
       <div id='detail'>

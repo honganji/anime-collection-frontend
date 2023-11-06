@@ -12,7 +12,7 @@ export default function AnimeItem(props) {
         <div className='anime-title' onClick={() => navigator(`/detail?id=${data["anime_id"]}`)}>{data["name"]}</div>
         <div className='item'><div className='subtitle'>Author:</div>&nbsp;&nbsp;{data["author"]}</div>
         <div className='item'><div className='subtitle'>Episodes:</div>&nbsp;&nbsp;{data["episodes"]}, Serises: {data["serises"]}</div>
-        <div className='item'><div className='subtitle'>Desription:</div>&nbsp;&nbsp;{data["description"]}</div>
+        <div className='item'><div className='subtitle'>Description:</div>&nbsp;&nbsp;{data["description"]}</div>
       </div>
     </div>
   );

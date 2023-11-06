@@ -1,4 +1,4 @@
-#tab-block {
+#tab-blocks {
   background-color: rgba(23, 13, 2, .10);
   width: 15px;
   height: 30px;
@@ -8,12 +8,12 @@
   border: 1px black solid;
 }
 
-#tab-block:hover {
+#tab-blocks:hover {
   cursor: pointer;
   background-color: rgba(23, 13, 2, .25);
 }
 
-#tab-block:active {
+#tab-blocks:active {
   cursor: pointer;
   background-color: rgba(23, 13, 2, .25);
 }

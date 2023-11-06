@@ -1,9 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import "./TabBlock.css";
+import "./TabBlocks.css";
 
-export default function TabBlock(props) {
+// tab boxes that is put at the bottom of the page
+export default function TabBlocks(props) {
   const navigator = useNavigate();
+
   function generateTabs() {
     let tabList = [];
     if (props.numOfTabs === 0) {
@@ -23,6 +25,7 @@ export default function TabBlock(props) {
     }
     return tabList;
   }
+
   return (
     generateTabs()
   );

@@ -7,6 +7,8 @@ import { request } from '../../helpers/axios_helpers';
 import Cookies from 'js-cookie';
 
 export default function CommentContainer(props) {
+
+  // if the comment container is open
   const [isOpen, setIsOpen] = useState(false);
   const [data, setData] = useState({});
   const [input, setInput] = useState("");
@@ -16,6 +18,7 @@ export default function CommentContainer(props) {
     setInput(e.target.value);
   }
 
+  // generate comment boxes
   function generateComments() {
     let commentList = [];
     data.map((element) => {
@@ -32,6 +35,7 @@ export default function CommentContainer(props) {
     setData(result.data);
   }
 
+  // insert comments into the DB
   async function onSubmit(e) {
     e.preventDefault();
     await request(

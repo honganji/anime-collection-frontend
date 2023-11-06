@@ -7,6 +7,7 @@ import { request } from '../helpers/axios_helpers';
 
 export default function Home() {
 
+  // variable to judge if the data is fetched
   const [isFetched, setIsFetched] = useState(false);
   const [data, setData] = useState([]);
 
@@ -20,6 +21,7 @@ export default function Home() {
   }
 
   useEffect(() => {
+    // go to the top area
     document.body.scrollTop = document.documentElement.scrollTop = 0;
     getAnimeData();
   }, []);

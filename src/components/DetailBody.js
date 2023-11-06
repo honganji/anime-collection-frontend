@@ -3,6 +3,8 @@ import "./DetailBody.css";
 
 export default function DetailBody(props) {
   const data = props.anime;
+
+  // control video type(mad or trailer)
   const [isMad, setIsMad] = useState(true);
 
   function switchVideoType() {

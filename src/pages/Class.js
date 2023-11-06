@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import TabBlock from '../components/parts/TabBlock';
+import TabBlocks from '../components/parts/TabBlocks';
 import AnimeItem from '../components/parts/AnimeItem';
 import "./Class.css";
 import Indicator from '../components/parts/Indicator';
@@ -10,6 +10,8 @@ export default function Class() {
   const [params] = useSearchParams();
   const term = (params.get("term")).charAt(0).toUpperCase() + (params.get("term")).slice(1);
   let list = [];
+
+  // variable to judge if the data is fetched
   const [isFetched, setIsFetched] = useState(false);
   const [data, setData] = useState([]);
   const [item, setItem] = useState("");
@@ -20,6 +22,8 @@ export default function Class() {
       "GET",
       "/api/animes"
     );
+
+    // depending on the term and its item, extract data
     if (term === "Genre") {
       setItem((params.get("item")).charAt(0).toUpperCase() + (params.get("item")).slice(1));
       list = result.data.filter((anime) => {
@@ -46,7 +50,7 @@ export default function Class() {
 
   function getTabs() {
     const numOfTabs = Math.floor(data.length / 10);
-    return <TabBlock numOfTabs={numOfTabs} />;
+    return <TabBlocks numOfTabs={numOfTabs} />;
   }
 
   return (

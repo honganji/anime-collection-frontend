@@ -6,7 +6,11 @@ import { faArrowRight, faArrowLeft, faCircle, faHandPointLeft, faHandPointRight 
 
 export default function Hero(props) {
   const navigator = useNavigate();
+
+  // variable to control video type
   const [isMad, setIsMad] = useState(true);
+
+  // index to control slide image
   const [slideIndex, setSlideIndex] = useState(1);
   const data = props.animeList;
 
@@ -14,6 +18,7 @@ export default function Hero(props) {
     setIsMad(!isMad);
   }
 
+  // generate box that is put under the images
   function generateDots() {
     let dotList = [];
     for (let i = 1; i <= 4; i++) {
@@ -30,6 +35,7 @@ export default function Hero(props) {
     heroZone.addEventListener('touchmove', handleTouchMove, false);
   });
 
+  // enable to swipe on a mobile device
   var xDown = null;
   var yDown = null;
 
@@ -56,18 +62,18 @@ export default function Hero(props) {
 
     if (Math.abs(xDiff) > Math.abs(yDiff)) {
       if (xDiff > 0) {
-        /* right swipe */
+        // right swipe
         if (slideIndex < 4) {
           setSlideIndex(slideIndex + 1);
         }
       } else {
-        /* left swipe */
+        // left swipe
         if (slideIndex > 1) {
           setSlideIndex(slideIndex - 1);
         }
       }
     }
-    /* reset values */
+    // reset values
     xDown = null;
     yDown = null;
   };

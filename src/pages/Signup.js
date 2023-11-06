@@ -7,6 +7,8 @@ import Cookies from 'js-cookie';
 
 export default function Signup() {
   const navigator = useNavigate();
+
+  // variable to set input data
   const [user, setUser] = useState({
     name: "",
     emailAddress: "",
@@ -18,6 +20,7 @@ export default function Signup() {
   function onInputChange(e) {
     setUser({ ...user, [e.target.name]: e.target.value });
   }
+
   async function onSubmit(e) {
     e.preventDefault();
     const result = await request(
@@ -25,6 +28,8 @@ export default function Signup() {
       "/signup",
       user
     );
+
+    // set authentication info
     setAuthHeader(result.data.token);
     var t = new Date();
     t.setSeconds(t.getSeconds() + EXPIRE_SECOND);
@@ -33,6 +38,7 @@ export default function Signup() {
     Cookies.set('id', result.data.id, { expires: t });
     navigator("/", {});
   };
+
   return (
     <div id='signup'>
       <form onSubmit={(e) => onSubmit(e)}>

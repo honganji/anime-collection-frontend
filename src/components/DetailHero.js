@@ -4,10 +4,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faArrowLeft, faCircle, faHandPointLeft, faHandPointRight } from '@fortawesome/free-solid-svg-icons';
 
 export default function DetailHero(props) {
+
+  // index to control slide image
   const [slideIndex, setSlideIndex] = useState(1);
   const data = props.anime;
   const imageUrlList = data["images"];
 
+  // generate box that is put under the images
   function generateDots() {
     let dotList = [];
     for (let i = 1; i <= 5; i++) {
@@ -24,6 +27,7 @@ export default function DetailHero(props) {
     heroZone.addEventListener('touchmove', handleTouchMove, false);
   });
 
+  // enable to swipe on a mobile device
   var xDown = null;
   var yDown = null;
 
@@ -50,21 +54,22 @@ export default function DetailHero(props) {
 
     if (Math.abs(xDiff) > Math.abs(yDiff)) {
       if (xDiff > 0) {
-        /* right swipe */
+        // right swipe
         if (slideIndex < 5) {
           setSlideIndex(slideIndex + 1);
         }
       } else {
-        /* left swipe */
+        // left swipe
         if (slideIndex > 1) {
           setSlideIndex(slideIndex - 1);
         }
       }
     }
-    /* reset values */
+    // reset values
     xDown = null;
     yDown = null;
   };
+
   return (
     <div id='detail-hero'>
       {slideIndex === 1

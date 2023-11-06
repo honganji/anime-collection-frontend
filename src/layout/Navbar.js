@@ -11,8 +11,6 @@ export default function Navbar() {
   const navigator = useNavigate();
   const url = useLocation();
 
-  // check current login state
-  // For Dev
   const name = Boolean(Cookies.get('name')) ? Cookies.get('name') : "Guest";
   const isLogin = Cookies.get('isLogin');
 
@@ -41,6 +39,7 @@ export default function Navbar() {
     return uiList;
   }
 
+  // clear the cookie variables and logout
   function logOut() {
     Cookies.set('name', "");
     Cookies.set('isLogin', false);
@@ -48,6 +47,7 @@ export default function Navbar() {
     navigator('/');
   }
 
+  // handle menu on the navigation bar
   function handleMenu() {
     var content = document.querySelector("#top-nav").querySelector(".hamburger-menu-content");
     var icon = document.querySelector("#top-nav").querySelector(".hamburger-menu-icon");
@@ -59,8 +59,6 @@ export default function Navbar() {
       icon.style.opacity = "0.90";
     }
   }
-
-  // useEffect(() => { }, [Cookies.get('isLogin')])
 
   return (
     <div id='top-nav'>
