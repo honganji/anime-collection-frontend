@@ -2,7 +2,8 @@ import React from 'react'
 import "./Indicator.css";
 import { TailSpin } from 'react-loader-spinner';
 
-function Indicator() {
+// this is an indicator put till data is fetched
+export default function Indicator() {
     return (
         <div id='tail-spin'>
             <TailSpin height="80"
@@ -18,5 +19,3 @@ function Indicator() {
         </div>
     )
 }
-
-export default Indicator

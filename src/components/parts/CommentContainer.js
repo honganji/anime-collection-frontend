@@ -3,69 +3,86 @@ import "./CommentContainer.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import Comment from './Comment';
-import axios from 'axios';
+import { request } from '../../helpers/axios_helpers';
+import Cookies from 'js-cookie';
 
-function CommentContainer(props) {
+export default function CommentContainer(props) {
+
+  // if the comment container is open
   const [isOpen, setIsOpen] = useState(false);
   const [data, setData] = useState({});
   const [input, setInput] = useState("");
+  const isLogin = Cookies.get('isLogin');
 
   function onInputChange(e) {
     setInput(e.target.value);
   }
 
+  // generate comment boxes
   function generateComments() {
     let commentList = [];
     data.map((element) => {
-      commentList.push(<Comment userName={element["user_id"]} content={element["content"]} />);
+      commentList.push(<Comment userName={element["name"]} content={element["content"]} />);
     });
     return commentList;
   }
 
   async function getData() {
-    const result = await axios.get(`https://anime-collection-api-v2.de.r.appspot.com/api/comments/${props.id}`);
+    const result = await request(
+      "GET",
+      `api/comments/${props.id}`
+    );
     setData(result.data);
   }
 
+  // insert comments into the DB
   async function onSubmit(e) {
     e.preventDefault();
-    const postResult = await axios.post("https://anime-collection-api-v2.de.r.appspot.com/api/comments", {
-      "animeId": props.id,
-      "userId": 1,
-      "content": input
-    });
-    const getResult = await axios.get(`https://anime-collection-api-v2.de.r.appspot.com/api/comments/${props.id}`);
-    setData(getResult.data);
+    await request(
+      "POST",
+      "/api/comments",
+      {
+        "animeId": props.id,
+        "userId": Cookies.get('id'),
+        "content": input
+      }
+    );
+    const comments = await request(
+      "GET",
+      `api/comments/${props.id}`
+    );
+    setData(comments.data);
     setInput("");
   }
 
   useEffect(() => {
     getData();
   }, []);
+
   return (
-    <div id='comment-container'>
-      {
-        isOpen ?
-          <div className='container'>
-            <div className='comment-box'>
-              <div className='comments'>
-                {generateComments()}
-              </div>
-              <form onSubmit={(e) => onSubmit(e)}>
-                <div className='input-box'>
-                  <div className='item'>Comment</div>
-                  <input className='box' type='text' placeholder={`write your comment!`} name={"input"} value={input} onChange={(e) => onInputChange(e)}></input>
+    isLogin == "true" ?
+      <div id='comment-container'>
+        {
+          isOpen ?
+            <div className='container'>
+              <div className='comment-box'>
+                <div className='comments'>
+                  {generateComments()}
                 </div>
-                <button type='submit' className='btn colored-btn send-btn'>Send</button>
-              </form>
+                <form onSubmit={(e) => onSubmit(e)}>
+                  <div className='input-box'>
+                    <div className='item'>Comment</div>
+                    <input className='box' type='text' placeholder={`write your comment!`} name={"input"} value={input} onChange={(e) => onInputChange(e)}></input>
+                  </div>
+                  <button type='submit' className='btn colored-btn send-btn'>Send</button>
+                </form>
+              </div>
+              <FontAwesomeIcon icon={faXmark} className='closed-button' onClick={() => setIsOpen(!isOpen)} />
             </div>
-            <FontAwesomeIcon icon={faXmark} className='closed-button' onClick={() => setIsOpen(!isOpen)} />
-          </div>
-          :
-          <div className='floating-button' onClick={() => setIsOpen(!isOpen)}>comments</div>
-      }
-    </div>
+            :
+            <div className='floating-button' onClick={() => setIsOpen(!isOpen)}>comments</div>
+        }
+      </div>
+      : <></>
   );
 }
-
-export default CommentContainer;

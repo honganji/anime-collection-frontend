@@ -1,20 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import "./Navbar.css";
 import Logo from '../components/parts/Logo';
 import termList from '../data/term';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Cookies from 'js-cookie';
 
 export default function Navbar() {
   const navigator = useNavigate();
   const url = useLocation();
 
-  // check current login state
-  // For Dev
-  const state = url.state ?? { name: "Guest" };
-  const pattern = /signup|login/g;
-  const result = pattern.test(url.pathname);
+  const name = Boolean(Cookies.get('name')) ? Cookies.get('name') : "Guest";
+  const isLogin = Cookies.get('isLogin');
 
   // control details elements open state
   var details = [...document.querySelectorAll('details')];
@@ -36,12 +34,21 @@ export default function Navbar() {
     });
     termObject[0]["items"].map((item) => {
       const title = term === "genre" ? item.charAt(0).toUpperCase() + item.slice(1) : `${item} ~ ${item + 9}`;
-      uiList.push(<div onClick={() => { navigator(`/class?term=${term}&item=${item}`); }}>{title}</div>);
+      uiList.push(<div onClick={() => { navigator(`/class?term=${term}&item=${item}`); }} key={item}>{title}</div>);
     });
     return uiList;
   }
 
-  function hundleMenu() {
+  // clear the cookie variables and logout
+  function logOut() {
+    Cookies.set('name', "");
+    Cookies.set('isLogin', false);
+    Cookies.set('id', 0);
+    navigator('/');
+  }
+
+  // handle menu on the navigation bar
+  function handleMenu() {
     var content = document.querySelector("#top-nav").querySelector(".hamburger-menu-content");
     var icon = document.querySelector("#top-nav").querySelector(".hamburger-menu-icon");
     if (content.style.display === "none") {
@@ -60,19 +67,17 @@ export default function Navbar() {
       </div>
       <div className='menu'>
         {
-          result
-            ? <></>
-            : <div className='upper-menu'>
-              <div className='greet'>Welcome {state.name}</div>
-              {
-                !url.state
-                  ? <div>
-                    <button className='btn colored-btn' onClick={() => navigator('/signup')}>Signup</button>
-                    <button className='btn colored-btn' onClick={() => navigator('/login')}>Log in</button>
-                  </div>
-                  : <button className='btn colored-btn' onClick={() => navigator('/')}>Log Out</button>
-              }
-            </div>
+          <div className='upper-menu'>
+            <div className='greet'>Welcome {name}</div>
+            {
+              isLogin == "true" ?
+                <button className='btn colored-btn' onClick={() => logOut()}>Log Out</button>
+                : <div>
+                  <button className='btn colored-btn' onClick={() => navigator('/signup')}>Signup</button>
+                  <button className='btn colored-btn' onClick={() => navigator('/login')}>Log in</button>
+                </div>
+            }
+          </div>
         }
         <div className='lower-menu'>
           <details className='dropdown'>
@@ -108,7 +113,7 @@ export default function Navbar() {
             </details>
           </div>
         </div>
-        <div className='hamburger-menu-icon' onClick={() => hundleMenu()}>
+        <div className='hamburger-menu-icon' onClick={() => handleMenu()}>
           <FontAwesomeIcon className='sp-fa' icon={faBars} />
         </div>
       </div>

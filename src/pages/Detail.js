@@ -3,29 +3,32 @@ import './Detail.css';
 import DetailHero from '../components/DetailHero';
 import { useSearchParams } from 'react-router-dom';
 import DetailBody from '../components/DetailBody';
-import axios from 'axios';
-import { TailSpin } from 'react-loader-spinner';
 import CommentContainer from '../components/parts/CommentContainer';
 import Indicator from '../components/parts/Indicator';
+import { request } from '../helpers/axios_helpers';
 
 export default function Detail() {
   const [params] = useSearchParams();
+
+  // variable to judge if the data is fetched
   const [isFetched, setIsFetched] = useState(false);
   const [data, setData] = useState([]);
 
-  const apiUrl = process.env.REACT_APP_IS_DEV === "true" ? process.env.REACT_APP_LOCALHOST_API_URL : process.env.REACT_APP_GCLOUD_API_URL;
-
-  let result;
   async function getAnimeData() {
-    result = await axios.get(`${apiUrl}/api/animes/${params.get("id")}`);
+    const result = await request(
+      "GET",
+      `/api/animes/${params.get("id")}`
+    );
     setData(result.data[0]);
     setIsFetched(true);
   }
 
   useEffect(() => {
+    // go to the top area
     document.body.scrollTop = document.documentElement.scrollTop = 0;
     getAnimeData();
   }, []);
+
   return (
     isFetched ?
       <div id='detail'>

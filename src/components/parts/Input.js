@@ -1,6 +1,7 @@
 import React from 'react';
 import "./Input.css";
 
+// input box
 export default function Input(props) {
   const title = props.propertyName[0].toUpperCase() + props.propertyName.substring(1);
   return (
