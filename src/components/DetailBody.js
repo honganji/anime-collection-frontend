@@ -8,6 +8,7 @@ export default function DetailBody(props) {
   function switchVideoType() {
     setIsMad(!isMad);
   }
+
   return (
     <div id='detail-body'>
       <div className='title'>{data["name"]}</div>

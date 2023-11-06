@@ -22,7 +22,6 @@ export default function TabBlock(props) {
       }
     }
     return tabList;
-
   }
   return (
     generateTabs()

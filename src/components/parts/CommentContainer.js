@@ -6,7 +6,7 @@ import Comment from './Comment';
 import { request } from '../../helpers/axios_helpers';
 import Cookies from 'js-cookie';
 
-function CommentContainer(props) {
+export default function CommentContainer(props) {
   const [isOpen, setIsOpen] = useState(false);
   const [data, setData] = useState({});
   const [input, setInput] = useState("");
@@ -54,6 +54,7 @@ function CommentContainer(props) {
   useEffect(() => {
     getData();
   }, []);
+
   return (
     isLogin == "true" ?
       <div id='comment-container'>
@@ -81,5 +82,3 @@ function CommentContainer(props) {
       : <></>
   );
 }
-
-export default CommentContainer;

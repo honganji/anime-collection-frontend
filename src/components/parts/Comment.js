@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Comment.css";
 
-function Comment(props) {
+export default function Comment(props) {
   return (
     <div id='comment'>
       <div className='user-name'>{props.userName}</div>
@@ -9,5 +9,3 @@ function Comment(props) {
     </div>
   );
 }
-
-export default Comment;

@@ -45,7 +45,7 @@ export default function Navbar() {
     Cookies.set('name', "");
     Cookies.set('isLogin', false);
     Cookies.set('id', 0);
-    navigator('/')
+    navigator('/');
   }
 
   function handleMenu() {

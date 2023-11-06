@@ -24,11 +24,9 @@ export default function Login() {
       "/login",
       user
     );
-    // setUser({
-    //   emailAddress: "",
-    //   password: ""
-    // });
+
     setAuthHeader(result.data.token);
+
     var t = new Date();
     t.setSeconds(t.getSeconds() + EXPIRE_SECOND);
     Cookies.set('name', result.data.name, { expires: t });

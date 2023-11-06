@@ -9,7 +9,7 @@ import Detail from './pages/Detail';
 import Class from './pages/Class';
 
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <Router>
@@ -26,5 +26,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
