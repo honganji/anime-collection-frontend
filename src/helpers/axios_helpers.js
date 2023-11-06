@@ -26,7 +26,6 @@ axios.defaults.headers.post['Content-Type'] = 'application/json';
 // template of request
 export function request(method, url, data) {
     let headers = {};
-    console.log(getAuthTokenFromCookie());
     if (typeof getAuthTokenFromCookie() !== "undefined" && getAuthTokenFromCookie() !== "null") {
         headers = { 'Authorization': `Bearer ${getAuthTokenFromCookie()}` };
     }

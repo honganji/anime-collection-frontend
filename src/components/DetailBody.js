@@ -38,8 +38,8 @@ export default function DetailBody(props) {
         <div className='cv-title'>Characters</div>
         <div className='cv-sub-container'>
           {
-            data["characters"].map((character) => {
-              return <div className='character-container'>
+            data["characters"].map((character, index) => {
+              return <div className='character-container' key={index}>
                 <img className='character-img' src={character["img_url"]} alt='character_img' />
                 <div className='author-description'>Name:&nbsp;<div className='author-content'>{character["name"]}</div></div>
                 <div className='author-feature-description'>Feature:&nbsp;<div className='author-feature-content'>{character["feature"]}</div></div>

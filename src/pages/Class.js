@@ -58,7 +58,7 @@ export default function Class() {
       <div id='class'>
         <div className='title'>{term}: {item}</div>
         {
-          data.map((anime) => <AnimeItem data={anime} />)
+          data.map((anime) => <AnimeItem data={anime} key={anime["anime_id"]} />)
         }
         {
           getTabs()

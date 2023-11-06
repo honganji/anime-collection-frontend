@@ -10,14 +10,14 @@ export default function TabBlocks(props) {
     let tabList = [];
     if (props.numOfTabs === 0) {
       tabList.push(
-        <div id='tab-block' onClick={() => navigator("/?tab=1")}>
+        <div id='tab-blocks' onClick={() => navigator("/?tab=1")} key={1}>
           1
         </div>
       );
     } else {
       for (let i = 1; i <= props.numOfTabs; i++) {
         tabList.push(
-          <div id='tab-block' onClick={() => navigator(`/?tab=${i}`)}>
+          <div id='tab-blocks' onClick={() => navigator(`/?tab=${i}`)} key={i}>
             {i}
           </div>
         );

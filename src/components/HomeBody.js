@@ -18,7 +18,7 @@ export default function HomeBody(props) {
     <div id='home-body'>
       <div className='title'>Anime List</div>
       {
-        dataList.map((data, index) => <AnimeItem data={data} index={index} />)
+        dataList.map((data, index) => <AnimeItem data={data} index={index} key={index} />)
       }
       <div className='tab-container'>
         {

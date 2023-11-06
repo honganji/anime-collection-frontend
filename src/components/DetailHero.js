@@ -15,7 +15,7 @@ export default function DetailHero(props) {
     let dotList = [];
     for (let i = 1; i <= 5; i++) {
       dotList.push(
-        <FontAwesomeIcon className='dot' icon={faCircle} style={i === slideIndex ? { color: "#E8582E", } : { color: "#B8B8B8", }} />
+        <FontAwesomeIcon className='dot' icon={faCircle} style={i === slideIndex ? { color: "#E8582E", } : { color: "#B8B8B8", }} key={i} />
       );
     }
     return dotList;

@@ -23,7 +23,7 @@ export default function Hero(props) {
     let dotList = [];
     for (let i = 1; i <= 4; i++) {
       dotList.push(
-        <FontAwesomeIcon className='dot' icon={faCircle} style={i === slideIndex ? { color: "#E8582E", } : { color: "#B8B8B8", }} />
+        <FontAwesomeIcon className='dot' icon={faCircle} key={i} style={i === slideIndex ? { color: "#E8582E", } : { color: "#B8B8B8", }} />
       );
     }
     return dotList;
