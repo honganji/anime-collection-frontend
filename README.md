@@ -23,7 +23,9 @@
 
 ## • Overview
 
-This is an anime collection website. You can see some popular anime's information. This includes trailer, MAD, author, and characters one. This website is hosted [here](https://anime-collection-fullstack.vercel.app/) using vercel.
+This is an anime collection website. You can see some popular anime's information. This includes trailer, MAD, author, and characters one. Also, this service has authentication function and if you sign up, you get the right to insert comment for each anime!
+
+This website is hosted [here](https://anime-collection-fullstack.vercel.app/) using vercel.
 
 API directory is [here](https://github.com/honganji/anime-collection-api).
 
@@ -35,7 +37,7 @@ API directory is [here](https://github.com/honganji/anime-collection-api).
 - FontAwesome
 - Vercel
 ### Backend
-- Java(Spring)
+- Java(Spring Boot, Spring Security)
 - Google Cloud(API)
 - MySQL
 - Aiven(DB)
@@ -52,9 +54,10 @@ API directory is [here](https://github.com/honganji/anime-collection-api).
 
 ### Detail
 ![Detail_1](./public/desktop/detail/detail_1.png)
-![Detail_1](./public/desktop/detail/detail_2.png)
-![Detail_1](./public/desktop/detail/detail_3.png)
-![Detail_1](./public/desktop/detail/detail_4.png)
+![Detail_5](./public/desktop/detail/detail_5.png)
+![Detail_3](./public/desktop/detail/detail_3.png)
+![Detail_4](./public/desktop/detail/detail_4.png)
+![Detail_2](./public/desktop/detail/detail_2.png)
 
 ## • Frontend images(Mobile)
 ### Home
