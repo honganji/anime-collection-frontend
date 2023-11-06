@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import "./Signup.css";
 import { useNavigate } from 'react-router-dom';
 import Input from '../components/parts/Input';
-import { request, setAuthHeader } from '../helpers/axios_helpers';
+import { EXPIRE_SECOND, request, setAuthHeader } from '../helpers/axios_helpers';
+import Cookies from 'js-cookie';
 
 export default function Signup() {
   const navigator = useNavigate();
@@ -19,21 +20,18 @@ export default function Signup() {
   }
   async function onSubmit(e) {
     e.preventDefault();
-    // await axios.post("http://localhost:8080/user", user);
     const result = await request(
       "POST",
       "/signup",
       user
     );
     setAuthHeader(result.data.token);
-    window.localStorage.setItem('name', result.data.name);
-    window.localStorage.setItem('isLogin', true);
-    window.localStorage.setItem('id', result.data.id);
-    navigator("/", {
-      // state: {
-      //   name: name
-      // }
-    });
+    var t = new Date();
+    t.setSeconds(t.getSeconds() + EXPIRE_SECOND);
+    Cookies.set('name', result.data.name, { expires: t });
+    Cookies.set('isLogin', true, { expires: t });
+    Cookies.set('id', result.data.id, { expires: t });
+    navigator("/", {});
   };
   return (
     <div id='signup'>

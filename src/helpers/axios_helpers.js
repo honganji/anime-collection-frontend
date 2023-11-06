@@ -1,12 +1,20 @@
 import axios from 'axios';
+import Cookies from 'js-cookie';
 
+export let EXPIRE_SECOND = 1800;
 
-export function getAuthToken() {
-    return window.localStorage.getItem('auth_token');
-};
+export function getAuthTokenFromCookie() {
+    return Cookies.get("authToken");
+}
 
 export function setAuthHeader(token) {
-    window.localStorage.setItem('auth_token', token);
+    var t = new Date();
+    t.setSeconds(t.getSeconds() + EXPIRE_SECOND);
+    Cookies.set(
+        "authToken",
+        token,
+        { expires: t },
+    )
 };
 
 axios.defaults.baseURL = process.env.REACT_APP_IS_DEV === "true" ? process.env.REACT_APP_LOCALHOST_API_URL : process.env.REACT_APP_GCLOUD_API_URL;
@@ -14,11 +22,10 @@ axios.defaults.headers.post['Content-Type'] = 'application/json';
 
 export function request(method, url, data) {
 
-    // setAuthHeader(null);
-
     let headers = {};
-    if (getAuthToken() !== null && getAuthToken() !== "null") {
-        headers = { 'Authorization': `Bearer ${getAuthToken()}` };
+    console.log(getAuthTokenFromCookie());
+    if (typeof getAuthTokenFromCookie() !== "undefined" && getAuthTokenFromCookie() !== "null") {
+        headers = { 'Authorization': `Bearer ${getAuthTokenFromCookie()}` };
     }
 
     return axios({

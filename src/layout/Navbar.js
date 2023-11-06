@@ -5,6 +5,7 @@ import Logo from '../components/parts/Logo';
 import termList from '../data/term';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Cookies from 'js-cookie';
 
 export default function Navbar() {
   const navigator = useNavigate();
@@ -12,8 +13,8 @@ export default function Navbar() {
 
   // check current login state
   // For Dev
-  const name = Boolean(window.localStorage.getItem('name')) ? window.localStorage.getItem('name') : "Guest";
-  const isLogin = window.localStorage.getItem('isLogin');
+  const name = Boolean(Cookies.get('name')) ? Cookies.get('name') : "Guest";
+  const isLogin = Cookies.get('isLogin');
 
   // control details elements open state
   var details = [...document.querySelectorAll('details')];
@@ -41,9 +42,9 @@ export default function Navbar() {
   }
 
   function logOut() {
-    window.localStorage.setItem('name', "");
-    window.localStorage.setItem('isLogin', false);
-    window.localStorage.setItem('id', 0);
+    Cookies.set('name', "");
+    Cookies.set('isLogin', false);
+    Cookies.set('id', 0);
     navigator('/')
   }
 
@@ -59,7 +60,7 @@ export default function Navbar() {
     }
   }
 
-  // useEffect(() => { }, [window.localStorage.getItem('isLogin')])
+  // useEffect(() => { }, [Cookies.get('isLogin')])
 
   return (
     <div id='top-nav'>

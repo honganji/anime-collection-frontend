@@ -3,14 +3,14 @@ import "./CommentContainer.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import Comment from './Comment';
-import axios from 'axios';
 import { request } from '../../helpers/axios_helpers';
+import Cookies from 'js-cookie';
 
 function CommentContainer(props) {
   const [isOpen, setIsOpen] = useState(false);
   const [data, setData] = useState({});
   const [input, setInput] = useState("");
-  const isLogin = window.localStorage.getItem('isLogin');
+  const isLogin = Cookies.get('isLogin');
 
   function onInputChange(e) {
     setInput(e.target.value);
@@ -34,21 +34,15 @@ function CommentContainer(props) {
 
   async function onSubmit(e) {
     e.preventDefault();
-    // const postResult = await axios.post("https://anime-collection-api-v2.de.r.appspot.com/api/comments", {
-    //   "animeId": props.id,
-    //   "userId": 1,
-    //   "content": input
-    // });
     await request(
       "POST",
       "/api/comments",
       {
         "animeId": props.id,
-        "userId": window.localStorage.getItem('id'),
+        "userId": Cookies.get('id'),
         "content": input
       }
     );
-    // const comments = await axios.get(`https://anime-collection-api-v2.de.r.appspot.com/api/comments/${props.id}`);
     const comments = await request(
       "GET",
       `api/comments/${props.id}`

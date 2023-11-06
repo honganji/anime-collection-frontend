@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import "./Login.css";
 import { useNavigate } from 'react-router-dom';
 import Input from '../components/parts/Input';
-import { request, setAuthHeader } from '../helpers/axios_helpers';
+import { EXPIRE_SECOND, request, setAuthHeader } from '../helpers/axios_helpers';
+import Cookies from 'js-cookie';
 
 export default function Login() {
   const navigator = useNavigate();
@@ -28,14 +29,12 @@ export default function Login() {
     //   password: ""
     // });
     setAuthHeader(result.data.token);
-    window.localStorage.setItem('name', result.data.name);
-    window.localStorage.setItem('isLogin', true);
-    window.localStorage.setItem('id', result.data.id);
-    navigator("/", {
-      // state: {
-      //   name: window.localStorage.getItem(result.data.name)
-      // }
-    });
+    var t = new Date();
+    t.setSeconds(t.getSeconds() + EXPIRE_SECOND);
+    Cookies.set('name', result.data.name, { expires: t });
+    Cookies.set('isLogin', true, { expires: t });
+    Cookies.set('id', result.data.id, { expires: t });
+    navigator("/");
   };
   return (
     <div id='login'>
