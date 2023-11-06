@@ -17,6 +17,8 @@ export default function Navbar() {
   // control details elements open state
   var details = [...document.querySelectorAll('details')];
   document.addEventListener('click', function (e) {
+    // content.style.display = "none";
+    // icon.style.opacity = "0.90";
     if (!details.some(f => f.contains(e.target))) {
       details.forEach(f => f.removeAttribute('open'));
     } else {
@@ -95,15 +97,16 @@ export default function Navbar() {
         </div>
       </div>
       <div className='hamburger-menu-container'>
+        <div className='user-name'>{name}</div>
         <div className='hamburger-menu-content'>
           <div className='hamburger-menu-content-container'>
             {
-              !url.state
-                ? <div>
+              isLogin == "true"
+                ? <div className='dropdown-item' onClick={() => logOut()}>Log Out</div>
+                : <div>
                   <div className='dropdown-item' onClick={() => navigator('/signup')}>Signup</div>
                   <div className='dropdown-item' onClick={() => navigator('/login')}>Log in</div>
                 </div>
-                : <div className='dropdown-item' onClick={() => navigator('/')}>Log Out</div>
             }
             <details className='dropdown'>
               <summary>Genre</summary>
