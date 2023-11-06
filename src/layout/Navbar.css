@@ -165,19 +165,27 @@
     position: relative;
   }
 
+  #top-nav .user-name {
+    position: fixed;
+    z-index: 10;
+    right: 30px;
+    top: 32px;
+    font-size: 12px;
+  }
+
   #top-nav .hamburger-menu-icon {
     padding-right: 10px;
     padding-top: 15px;
     color: #170D02;
     position: absolute;
     right: 0px;
-    top: 10px;
+    top: 14px;
   }
 
   #top-nav .hamburger-menu-container {
     width: 100px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .hamburger-menu-content-container {
@@ -212,8 +220,6 @@
   }
 
   #top-nav .dropdown-item {
-    /* TODO: show if when you implement login function */
-    display: none;
     font-weight:600;
   }
 }
