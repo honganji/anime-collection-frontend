@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import "./Login.css";
 import { useNavigate } from 'react-router-dom';
 import Input from '../components/parts/Input';
-import { request } from '../helpers/axios_helpers';
+import { request, setAuthHeader } from '../helpers/axios_helpers';
 
 export default function Lonin() {
   const navigator = useNavigate();
@@ -24,15 +24,16 @@ export default function Lonin() {
       user
     );
     console.log(result.data);
-    setUser({
-      emailAddress: "",
-      password: ""
-    });
-    // navigator("/", {
-    //   state: {
-    //     name: name
-    //   }
+    // setUser({
+    //   emailAddress: "",
+    //   password: ""
     // });
+    setAuthHeader(result.data.token);
+    navigator("/", {
+      // state: {
+      //   name: window.localStorage.getItem(result.data.name)
+      // }
+    });
   };
   return (
     <div id='login'>

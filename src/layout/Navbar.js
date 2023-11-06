@@ -12,7 +12,7 @@ export default function Navbar() {
 
   // check current login state
   // For Dev
-  const state = url.state ?? { name: "Guest" };
+  const state = window.localStorage.getItem('name') ?? { name: "Guest" };
   const pattern = /signup|login/g;
   const result = pattern.test(url.pathname);
 
@@ -36,7 +36,7 @@ export default function Navbar() {
     });
     termObject[0]["items"].map((item) => {
       const title = term === "genre" ? item.charAt(0).toUpperCase() + item.slice(1) : `${item} ~ ${item + 9}`;
-      uiList.push(<div onClick={() => { navigator(`/class?term=${term}&item=${item}`); }}>{title}</div>);
+      uiList.push(<div onClick={() => { navigator(`/class?term=${term}&item=${item}`); }} key={item}>{title}</div>);
     });
     return uiList;
   }

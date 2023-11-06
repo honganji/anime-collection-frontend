@@ -1,11 +1,11 @@
 import axios from 'axios';
 
 
-export const getAuthToken = () => {
+export function getAuthToken() {
     return window.localStorage.getItem('auth_token');
 };
 
-export const setAuthHeader = (token) => {
+export function setAuthHeader(token) {
     window.localStorage.setItem('auth_token', token);
 };
 
@@ -20,15 +20,10 @@ export function request(method, url, data) {
         headers = { 'Authorization': `Bearer ${getAuthToken()}` };
     }
 
-    return axios.post("/login", {
-        "emailAddress": data["emailAddress"],
-        "password": data["password"]
-    })
-
-    // return axios({
-    //     method: method,
-    //     url: url,
-    //     headers: headers,
-    //     data: data
-    // });
+    return axios({
+        method: method,
+        url: url,
+        headers: headers,
+        data: data
+    });
 };

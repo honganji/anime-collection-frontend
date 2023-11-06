@@ -46,7 +46,7 @@
 
 #top-nav .upper-menu {
   /* TODO: show if when you implement login function */
-  display: none;
+  /* display: none; */
   justify-content: center;
   align-items: center;
 }

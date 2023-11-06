@@ -2,20 +2,19 @@ import React, { useEffect, useState } from 'react';
 import "./Home.css";
 import Hero from '../components/HomeHero';
 import HomeBody from '../components/HomeBody';
-import axios from 'axios';
-import { TailSpin } from 'react-loader-spinner';
 import Indicator from '../components/parts/Indicator';
+import { request } from '../helpers/axios_helpers';
 
 export default function Home() {
 
   const [isFetched, setIsFetched] = useState(false);
   const [data, setData] = useState([]);
 
-  const apiUrl = process.env.REACT_APP_IS_DEV === "true" ? process.env.REACT_APP_LOCALHOST_API_URL : process.env.REACT_APP_GCLOUD_API_URL;
-
-  let result;
   async function getAnimeData() {
-    result = await axios.get(`${apiUrl}/api/animes`);
+    const result = await request(
+      "GET",
+      "/api/animes"
+    );
     setData(result.data);
     setIsFetched(true);
   }
