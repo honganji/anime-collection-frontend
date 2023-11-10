@@ -16,6 +16,7 @@ export default function Indicator() {
                 visible={true}
             />
             <div className='message'>Fetching Data...</div>
+            <div className='message'>Maybe it takes around 10 seconds at the first time :(</div>
         </div>
     )
 }
