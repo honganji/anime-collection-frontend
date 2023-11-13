@@ -55,8 +55,8 @@ export default function Login() {
             })}
           />
         </div>
-        {errors.email?.types?.required && <div>{errors.email?.types?.required}</div>}
-        {errors.email?.types?.pattern && <div>{errors.email?.types?.pattern}</div>}
+        {errors.email?.types?.required && <div className='error'>{errors.email?.types?.required}</div>}
+        {errors.email?.types?.pattern && <div className='error'>{errors.email?.types?.pattern}</div>}
         <div className="input">
           <div className='item'>Password</div>
           <input
@@ -77,9 +77,9 @@ export default function Login() {
             })}
           />
         </div>
-        {errors.password?.types?.required && <div>{errors.password?.types?.required}</div>}
-        {errors.password?.types?.minLength && <div>{errors.password?.types?.minLength}</div>}
-        {errors.password?.types?.maxLength && <div>{errors.password?.types?.maxLength}</div>}
+        {errors.password?.types?.required && <div className='error'>{errors.password?.types?.required}</div>}
+        {errors.password?.types?.minLength && <div className='error'>{errors.password?.types?.minLength}</div>}
+        {errors.password?.types?.maxLength && <div className='error'>{errors.password?.types?.maxLength}</div>}
         <button type='submit' className='btn colored-btn'>Login</button>
       </form>
     </div>
