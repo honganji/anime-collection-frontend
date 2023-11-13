@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import "./Signup.css";
 import { useNavigate } from 'react-router-dom';
-import Input from '../components/parts/Input';
 import { EXPIRE_SECOND, request, setAuthHeader } from '../helpers/axios_helpers';
 import Cookies from 'js-cookie';
+import { useForm } from "react-hook-form"
 
 export default function Signup() {
   const navigator = useNavigate();
@@ -15,6 +15,15 @@ export default function Signup() {
     password: ""
   });
 
+  const {
+    register,
+    handleSubmit,
+    getValues,
+    formState: { errors },
+  } = useForm({
+    criteriaMode: 'all',
+  });
+
   const { name, emailAddress, password } = user;
 
   function onInputChange(e) {
@@ -22,11 +31,14 @@ export default function Signup() {
   }
 
   async function onSubmit(e) {
-    e.preventDefault();
     const result = await request(
       "POST",
       "/signup",
-      user
+      {
+        name: getValues("name"),
+        emailAddress: getValues("email"),
+        password: getValues("password")
+      }
     );
 
     // set authentication info
@@ -40,11 +52,63 @@ export default function Signup() {
   };
 
   return (
-    <div id='signup'>
-      <form onSubmit={(e) => onSubmit(e)}>
-        <Input propertyName="name" value={name} onInputChange={onInputChange} />
-        <Input propertyName="emailAddress" value={emailAddress} onInputChange={onInputChange} />
-        <Input propertyName="password" value={password} onInputChange={onInputChange} />
+    <div id='sign-up'>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div className="input">
+          <div className='item'>Name</div>
+          <input
+            className='box'
+            {...register('name', {
+              required: {
+                value: true,
+                message: 'You must input something',
+              },
+            })}
+          />
+        </div>
+        {errors.name?.types?.required && <div className='error'>{errors.name?.types?.required}</div>}
+        <div className="input">
+          <div className='item'>Email Address</div>
+          <input
+            className='box'
+            {...register('email', {
+              required: {
+                value: true,
+                message: 'You must input something',
+              },
+              pattern: {
+                value: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                message: 'Please input mail address',
+              },
+            })}
+          />
+        </div>
+        {errors.email?.types?.required && <div className='error'>{errors.email?.types?.required}</div>}
+        {errors.email?.types?.pattern && <div className='error'>{errors.email?.types?.pattern}</div>}
+        <div className="input">
+          <div className='item'>Password</div>
+          <input
+            className='box'
+            {...register('password', {
+              required: {
+                value: true,
+                message: 'You must input something',
+              },
+              minLength: {
+                value: 4,
+                message: 'Please make the length more than 4 characters',
+              },
+              maxLength: {
+                value: 20,
+                message: 'Please make the length less than 20 characters',
+              },
+            })}
+          />
+        </div>
+        {errors.password?.types?.required && <div className='error'>{errors.password?.types?.required}</div>}
+        {errors.password?.types?.minLength && <div className='error'>{errors.password?.types?.minLength}</div>}
+        {errors.password?.types?.maxLength && <div className='error'>{errors.password?.types?.maxLength}</div>}
+
         <button type='submit' className='btn colored-btn'>Signup</button>
       </form>
     </div>

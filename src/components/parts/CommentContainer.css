@@ -158,3 +158,15 @@
     margin: 5px;
   }
 }
+
+#comment-container .error {
+  align-self: center;
+  font-size: 16px;
+  color: #E8442E;
+}
+
+@media only screen and (max-width: 500px) {
+  #comment-container .error {
+    font-size: 12px;
+  }
+}

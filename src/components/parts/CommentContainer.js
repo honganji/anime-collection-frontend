@@ -5,18 +5,24 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import Comment from './Comment';
 import { request } from '../../helpers/axios_helpers';
 import Cookies from 'js-cookie';
+import { useForm } from "react-hook-form"
 
 export default function CommentContainer(props) {
 
   // if the comment container is open
   const [isOpen, setIsOpen] = useState(false);
   const [data, setData] = useState({});
-  const [input, setInput] = useState("");
   const isLogin = Cookies.get('isLogin');
 
-  function onInputChange(e) {
-    setInput(e.target.value);
-  }
+  const {
+    register,
+    resetField,
+    handleSubmit,
+    getValues,
+    formState: { errors },
+  } = useForm({
+    criteriaMode: 'all',
+  });
 
   // generate comment boxes
   function generateComments() {
@@ -37,22 +43,21 @@ export default function CommentContainer(props) {
 
   // insert comments into the DB
   async function onSubmit(e) {
-    e.preventDefault();
     await request(
       "POST",
       "/api/comments",
       {
-        "animeId": props.id,
-        "userId": Cookies.get('id'),
-        "content": input
+        animeId: props.id,
+        userId: Cookies.get('id'),
+        content: getValues("content")
       }
     );
     const comments = await request(
       "GET",
       `api/comments/${props.id}`
     );
+    resetField("content")
     setData(comments.data);
-    setInput("");
   }
 
   useEffect(() => {
@@ -69,10 +74,19 @@ export default function CommentContainer(props) {
                 <div className='comments'>
                   {generateComments()}
                 </div>
-                <form onSubmit={(e) => onSubmit(e)}>
+                <form onSubmit={handleSubmit(onSubmit)}>
                   <div className='input-box'>
                     <div className='item'>Comment</div>
-                    <input className='box' type='text' placeholder={`write your comment!`} name={"input"} value={input} onChange={(e) => onInputChange(e)}></input>
+                    <input
+                      className='box'
+                      {...register('content', {
+                        required: {
+                          value: true,
+                          message: 'You must input something',
+                        },
+                      })}
+                    />
+                    {errors.content?.types?.required && <div className='error'>{errors.content?.types?.required}</div>}
                   </div>
                   <button type='submit' className='btn colored-btn send-btn'>Send</button>
                 </form>
