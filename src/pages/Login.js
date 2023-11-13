@@ -46,20 +46,17 @@ export default function Login() {
             {...register('email', {
               required: {
                 value: true,
-                message: '入力必須の項目',
+                message: 'You must input something',
               },
               pattern: {
                 value: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-                message: 'メールアドレスを入力してください',
+                message: 'Please input mail address',
               },
             })}
           />
         </div>
-        {errors.email?.types?.required && <div>入力が必須の項目です</div>}
+        {errors.email?.types?.required && <div>{errors.email?.types?.required}</div>}
         {errors.email?.types?.pattern && <div>{errors.email?.types?.pattern}</div>}
-        {console.log(errors.email?.types)}
-        {console.log(getValues("email"))}
-
         <div className="input">
           <div className='item'>Password</div>
           <input
@@ -83,8 +80,6 @@ export default function Login() {
         {errors.password?.types?.required && <div>{errors.password?.types?.required}</div>}
         {errors.password?.types?.minLength && <div>{errors.password?.types?.minLength}</div>}
         {errors.password?.types?.maxLength && <div>{errors.password?.types?.maxLength}</div>}
-        {console.log(errors.password?.types)}
-        {console.log(getValues("password"))}
         <button type='submit' className='btn colored-btn'>Login</button>
       </form>
     </div>
