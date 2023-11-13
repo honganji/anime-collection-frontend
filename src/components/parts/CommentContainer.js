@@ -12,7 +12,6 @@ export default function CommentContainer(props) {
   // if the comment container is open
   const [isOpen, setIsOpen] = useState(false);
   const [data, setData] = useState({});
-  const [input, setInput] = useState("");
   const isLogin = Cookies.get('isLogin');
 
   const {
@@ -24,10 +23,6 @@ export default function CommentContainer(props) {
   } = useForm({
     criteriaMode: 'all',
   });
-
-  function onInputChange(e) {
-    setInput(e.target.value);
-  }
 
   // generate comment boxes
   function generateComments() {
@@ -48,7 +43,6 @@ export default function CommentContainer(props) {
 
   // insert comments into the DB
   async function onSubmit(e) {
-    // e.preventDefault();
     await request(
       "POST",
       "/api/comments",
@@ -64,7 +58,6 @@ export default function CommentContainer(props) {
     );
     resetField("content")
     setData(comments.data);
-    setInput("");
   }
 
   useEffect(() => {
@@ -84,7 +77,6 @@ export default function CommentContainer(props) {
                 <form onSubmit={handleSubmit(onSubmit)}>
                   <div className='input-box'>
                     <div className='item'>Comment</div>
-                    {/* <input className='box' type='text' placeholder={`write your comment!`} name={"input"} value={input} onChange={(e) => onInputChange(e)}></input> */}
                     <input
                       className='box'
                       {...register('content', {

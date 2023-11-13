@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "./Login.css";
 import { useNavigate } from 'react-router-dom';
-import Input from '../components/parts/Input';
 import { EXPIRE_SECOND, request, setAuthHeader } from '../helpers/axios_helpers';
 import Cookies from 'js-cookie';
 import { useForm } from "react-hook-form"
@@ -39,7 +38,7 @@ export default function Login() {
   return (
     <div id='login'>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div id="input">
+        <div className="input">
           <div className='item'>Email Address</div>
           <input
             className='box'

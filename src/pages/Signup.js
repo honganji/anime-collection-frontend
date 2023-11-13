@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import "./Signup.css";
 import { useNavigate } from 'react-router-dom';
-import Input from '../components/parts/Input';
 import { EXPIRE_SECOND, request, setAuthHeader } from '../helpers/axios_helpers';
 import Cookies from 'js-cookie';
 import { useForm } from "react-hook-form"
@@ -55,7 +54,7 @@ export default function Signup() {
   return (
     <div id='sign-up'>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div id="input">
+        <div className="input">
           <div className='item'>Name</div>
           <input
             className='box'
@@ -68,7 +67,7 @@ export default function Signup() {
           />
         </div>
         {errors.name?.types?.required && <div className='error'>{errors.name?.types?.required}</div>}
-        <div id="input">
+        <div className="input">
           <div className='item'>Email Address</div>
           <input
             className='box'
