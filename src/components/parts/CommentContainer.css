@@ -83,7 +83,7 @@
   }
 }
 
-#comment-containerinput[type=text]:focus {
+#comment-container input:focus {
   outline: none;
   border: 2px solid #DC8C37 ;
 }
