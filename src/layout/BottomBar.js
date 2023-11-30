@@ -10,6 +10,8 @@ export default function BottomBar() {
   const navigator = useNavigate();
   const url = useLocation();
   const pattern = /signup|login/g;
+
+  // variable controls if the bottom bar is placed
   const result = pattern.test(url.pathname);
   return (
     result

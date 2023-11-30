@@ -1,4 +1,4 @@
-#signup {
+#sign-up {
   height: 87vh;
   display: flex;
   flex-direction: column;
@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-#signup .colored-btn {
+#sign-up .colored-btn {
   margin-top: 20px;
   height: 60px;
   width: 150px;
@@ -14,10 +14,67 @@
   font-size: 28px;
 }
 
-#signup .colored-btn:hover {
+#sign-up .colored-btn:hover {
   font-size: 30px;
 }
 
-#signup .colored-btn:active {
+#sign-up .colored-btn:active {
   font-size: 30px;
 }
+
+#sign-up .input {
+  display: flex;
+  flex-direction: column;
+  margin: 7px;
+}
+
+#sign-up .item {
+  align-self: flex-start;
+  font-size: 28px;
+  font-weight: bolder;
+}
+
+@media only screen and (max-width: 500px) {
+  #sign-up .item {
+    align-self: flex-start;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+}
+
+#sign-up .box {
+  width: 400px;
+  height: 80px;
+  background-color: rgba(23, 13, 2, .05);
+  border-radius: 10px;
+  border: 1px solid #170D02;
+  font-size: 24px;
+}
+
+@media only screen and (max-width: 500px) {
+  #sign-up .box {
+    width: 200px;
+    height: 30px;
+    background-color: rgba(23, 13, 2, .05);
+    border-radius: 10px;
+    border: 1px solid #170D02;
+    font-size: 12px;
+  }
+}
+
+#sign-up sign-up[type=text]:focus {
+  outline: none;
+  border: 2px solid #DC8C37 ;
+}
+
+#sign-up .error {
+  font-size: 16px;
+  color: #E8442E;
+}
+
+@media only screen and (max-width: 500px) {
+  #sign-up .error {
+    font-size: 12px;
+  }
+}
+

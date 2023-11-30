@@ -1,7 +1,7 @@
 #top-nav {
   padding: 0px 96px 8px 96px;
   border: black;
-  height: 12vh;
+  height: 104px;
   display: flex;
   justify-content: space-between;
   text-align: center;
@@ -46,6 +46,7 @@
 
 #top-nav .upper-menu {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -150,13 +151,13 @@
 }
 
 @media all and (min-width:500px) {
-  #top-nav .humbegar-menu-container {
+  #top-nav .hamburger-menu-container {
     display: none;
   }
 }
 
 @media only screen and (max-width: 500px) {
-  #top-nav .humbergar-menu-content {
+  #top-nav .hamburger-menu-content {
     display: none;
     background-color: rgba(23, 13, 2, .15);
     top: 50px;
@@ -164,23 +165,29 @@
     position: relative;
   }
 
-  #top-nav .humbergar-menu-icon {
-    display: none;
+  #top-nav .user-name {
+    position: relative;
+    right: 0px;
+    top: 32px;
+    font-size: 12px;
+  }
+
+  #top-nav .hamburger-menu-icon {
     padding-right: 10px;
     padding-top: 15px;
     color: #170D02;
     position: absolute;
     right: 0px;
-    top: 10px;
+    top: 14px;
   }
 
-  #top-nav .humbegar-menu-container {
+  #top-nav .hamburger-menu-container {
     width: 100px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
 
-  .humbergar-menu-content-container {
+  .hamburger-menu-content-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

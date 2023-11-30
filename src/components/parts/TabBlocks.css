@@ -1,0 +1,19 @@
+#tab-blocks {
+  background-color: rgba(23, 13, 2, .10);
+  width: 15px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px black solid;
+}
+
+#tab-blocks:hover {
+  cursor: pointer;
+  background-color: rgba(23, 13, 2, .25);
+}
+
+#tab-blocks:active {
+  cursor: pointer;
+  background-color: rgba(23, 13, 2, .25);
+}
