@@ -5,6 +5,7 @@ import AnimeItem from '../components/parts/AnimeItem';
 import "./Class.css";
 import Indicator from '../components/parts/Indicator';
 import { request } from '../helpers/axios_helpers';
+import animeList from '../data/anime';
 
 export default function Class() {
   const [params] = useSearchParams();
@@ -18,10 +19,15 @@ export default function Class() {
 
   async function getAnimeData() {
     setIsFetched(false);
-    const result = await request(
-      "GET",
-      "/api/animes"
-    );
+
+    // fetch data from DB
+    // const result = await request(
+    //   "GET",
+    //   "/api/animes"
+    // );
+
+    // use local data
+    const result = animeList;
 
     // depending on the term and its item, extract data
     if (term === "Genre") {
