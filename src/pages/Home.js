@@ -4,6 +4,7 @@ import Hero from '../components/HomeHero';
 import HomeBody from '../components/HomeBody';
 import Indicator from '../components/parts/Indicator';
 import { request } from '../helpers/axios_helpers';
+import animeList from '../data/anime';
 
 export default function Home() {
 
@@ -12,10 +13,14 @@ export default function Home() {
   const [data, setData] = useState([]);
 
   async function getAnimeData() {
-    const result = await request(
-      "GET",
-      "/api/animes"
-    );
+    // fetch data from DB
+    // const result = await request(
+    //   "GET",
+    //   "/api/animes"
+    // );
+
+    // use local data
+    const result = animeList;
     setData(result.data);
     setIsFetched(true);
   }
