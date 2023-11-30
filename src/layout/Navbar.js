@@ -68,7 +68,7 @@ export default function Navbar() {
         <Logo />
       </div>
       <div className='menu'>
-        {
+        {/* {
           <div className='upper-menu'>
             <div className='greet'>Welcome {name}</div>
             {
@@ -80,7 +80,7 @@ export default function Navbar() {
                 </div>
             }
           </div>
-        }
+        } */}
         <div className='lower-menu'>
           <details className='dropdown'>
             <summary>Genre</summary>
