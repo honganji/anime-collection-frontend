@@ -5,7 +5,7 @@ import { useSearchParams } from 'react-router-dom';
 import DetailBody from '../components/DetailBody';
 import CommentContainer from '../components/parts/CommentContainer';
 import Indicator from '../components/parts/Indicator';
-import { request } from '../helpers/axios_helpers';
+// import { request } from '../helpers/axios_helpers';
 import animeList from '../data/anime';
 
 export default function Detail() {
@@ -37,7 +37,7 @@ export default function Detail() {
   return (
     isFetched ?
       <div id='detail'>
-        <CommentContainer id={data["anime_id"]} />
+        {/* <CommentContainer id={data["anime_id"]} /> */}
         <DetailHero anime={data} />
         <DetailBody anime={data} />
       </div>
