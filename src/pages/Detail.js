@@ -6,6 +6,7 @@ import DetailBody from '../components/DetailBody';
 import CommentContainer from '../components/parts/CommentContainer';
 import Indicator from '../components/parts/Indicator';
 import { request } from '../helpers/axios_helpers';
+import animeList from '../data/anime';
 
 export default function Detail() {
   const [params] = useSearchParams();
@@ -15,11 +16,15 @@ export default function Detail() {
   const [data, setData] = useState([]);
 
   async function getAnimeData() {
-    const result = await request(
-      "GET",
-      `/api/animes/${params.get("id")}`
-    );
-    setData(result.data[0]);
+    // fetch data from DB
+    // const result = await request(
+    //   "GET",
+    //   `/api/animes/${params.get("id")}`
+    // );
+    // setData(result.data[0]);
+
+    // use local data
+    setData(animeList.data[`${params.get("id") - 1}`]);
     setIsFetched(true);
   }
 

@@ -1,7 +1,7 @@
 const animeList = {
   data: [
     {
-      id: 1,
+      anime_id: 1,
       name: "Jujutsu Kaisen",
       image_url: "https://s.animeanime.jp/imgs/p/X2bKTbbkhKNuuQZDts1HWTagH66grq_oqaqr/491839.jpg",
       trailer_id: "O6qVieflwqs",
@@ -68,7 +68,7 @@ const animeList = {
       ]
     },
     {
-      id: 2,
+      anime_id: 2,
       name: "Nisekoi",
       image_url: "https://prtimes.jp/i/16356/1309/origin/d16356-1309-922161-0.jpg",
       trailer_id: "dPBBNxl_nKE",
@@ -149,7 +149,7 @@ const animeList = {
       ]
     },
     {
-      id: 3,
+      anime_id: 3,
       name: "Attack on Titan",
       image_url: "https://preview.redd.it/attack-on-titan-poster-art-hope-u-all-like-it-checkout-my-v0-1vpip3olezd81.jpg?width=2500&format=pjpg&auto=webp&s=df7beb0ca30fcabe31b8462d289619cb380b9cbd",
       tailer_id: "nQOM_h3RtmM",
@@ -244,7 +244,7 @@ const animeList = {
       ]
     },
     {
-      id: 4,
+      anime_id: 4,
       name: "Magi: The Labyrinth of Magic",
       image_url: "https://www.themoviedb.org/t/p/original/htcydwrp69GeWmNFUf9Ja6wSzew.jpg",
       trailer_id: "2E7o26G1T0c",
@@ -297,7 +297,7 @@ const animeList = {
       ]
     },
     {
-      id: 5,
+      anime_id: 5,
       name: "Naruto",
       image_url: "https://asset.watch.impress.co.jp/img/avw/docs/1518/304/na01_s.jpg",
       trailer_id: "yKELA1qBAKA",
@@ -350,7 +350,7 @@ const animeList = {
       ]
     },
     {
-      id: 6,
+      anime_id: 6,
       name: "Toriko",
       image_url: "https://cdn.donmai.us/original/9e/dd/9edda34992a8da5a7dc0ac6ce458fe68.jpg",
       trailer_id: "Wpfl3-ZH6DQ",
@@ -403,7 +403,7 @@ const animeList = {
       ]
     },
     {
-      id: 7,
+      anime_id: 7,
       name: "Kingdom",
       image_url: "https://kingdom-anime.com/images/sp/r_mv_l1.jpg",
       trailer_id: "bYudboNENqs",
@@ -470,7 +470,7 @@ const animeList = {
       ]
     },
     {
-      id: 8,
+      anime_id: 8,
       name: "My Love Story with Yamada-kun at Lv999",
       image_url: "https://upload.wikimedia.org/wikipedia/en/thumb/3/37/Loving_Yamada_at_Lv999%21_volume_1_cover.jpg/220px-Loving_Yamada_at_Lv999%21_volume_1_cover.jpg",
       trailer_id: "TJn4CziJD04",
